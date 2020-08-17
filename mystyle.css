@@ -55,6 +55,12 @@ body {
     max-width: 500px;
 }
 
+.search_bar_sticky
+{
+    position: sticky;
+    top: 0;
+}
+
 .search_bar_forum input
 {
     box-sizing: border-box;
