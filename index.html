@@ -7,7 +7,37 @@
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 
     <title>ISIT207 Online Store</title>
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=wGz6mJoFEZDe35aVlIS1KG0aBF_E4GlxQd3ou2Jab1jC6YULIxfIxIANSOFlWqwPD-MEEmCif2CxB1o8rGh5X2IS8vm1p8saSd3QKDIFbjzBDJlak11zTjO6puDwH3zu0T8otJXmBkX3_U8T5zZ8wQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvNzQzNzMzMTQyNTQzOTI1MzAxLzc0NDgwODkyMDE2NTUxNTI5NC9pbmRleC5odG1s"/></head>
+	<script>
+		function open_Side_Panel_View()
+		{
+		document.getElementById("slide_panel_view_JavaScript").style.width = "220px";
+		}
+
+		function close_Side_Panel_View()
+		{
+		document.getElementById("slide_panel_view_JavaScript").style.width = "0";
+		}
+
+		function dropAllowed(ev1){
+		
+			ev1.preventDefault();
+
+		}
+
+		function drag_func(ev1){
+		
+		ev1.dataTransfer.setData("text", ev1.target.id);
+		
+		}
+
+		function drop_func(ev1){
+		
+			ev1.preventDefault();
+			var target_data = ev1.dataTransfer.getData("text");
+			ev1.target.appendChild(document.getElementById(target_data));
+		
+		}
+	</script>
 <body>
 
 	<div class="heading">
@@ -41,35 +71,27 @@
 	
 	<table>
 
-    <tr>
+		<tr>
 
-		<td><table>
-			<tr><td class="side_menu_data"><button class="side_menu">Cars</button></td></tr>
-			<tr><td class="side_menu_data"><button class="side_menu">Cameras</button></td></tr>
-			<tr><td class="side_menu_data"><button class="side_menu">Electronics</button></td></tr>
-			<tr><td><button class="side_menu">Music</button></td></tr>
-		</table></td>
-	</tr>
+			<td>
+				<table>
+					<tr><td class="side_menu_data"><button class="side_menu">Cars</button></td></tr>
+					<tr><td class="side_menu_data"><button class="side_menu">Cameras</button></td></tr>
+					<tr><td class="side_menu_data"><button class="side_menu">Electronics</button></td></tr>
+					<tr><td class="side_menu_data"><button class="side_menu">Music</button></td></tr>
+					<tr><th style=" font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Drag and Drop</th></tr>
+					<tr><td class="side_menu_data"><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"><img src="summer.jpg" class="img_fit_container" draggable="true" ondragstart="drag_func(event)" id="summer_pic" /></div></td></tr>
+					<tr><td><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"></div></td></tr>
+				</table>
+			</td>
+		</tr>
 
-	
+
 
 	</table>
 
 
 
-
-	<!-- JavaScript Code starts from here onwards -->
-	<script>
-		function open_Side_Panel_View()
-		{
-			document.getElementById("slide_panel_view_JavaScript").style.width = "220px";
-		}
-
-		function close_Side_Panel_View()
-		{
-			document.getElementById("slide_panel_view_JavaScript").style.width = "0";
-		}
-	</script>
 
 </body>
 </html>
