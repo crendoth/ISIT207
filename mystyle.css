@@ -90,3 +90,56 @@ body {
 }
 /* This is for search bar and it ends here */
 
+
+/* This is for side panel and it starts here */
+.side_panel_open_button
+{
+    position: fixed;
+    left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    background-color: black
+}
+
+.side_panel_open_button:hover
+{
+    background-color: dimgray;
+    transition: 0.25s;
+}
+
+.slide_panel_view
+{
+    width: 0;
+    position: fixed;
+    height: 260px;
+    overflow-x: hidden;
+    background-color: black;
+    padding-top: 50px;
+    transition: 0.45s;
+}
+
+.slide_panel_view a
+{
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: grey;
+    text-decoration: none;
+    align-content: center;
+}
+
+.slide_panel_view a:hover
+{
+    color: white;
+    transition: 0.35s;
+}
+
+.slide_panel_view .side_panel_close_button
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 25px;
+}
+/* This is for side panel and it ends here */

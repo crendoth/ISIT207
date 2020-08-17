@@ -11,6 +11,20 @@
 <body>
 
 	<div class="heading">
+		<!-- The side panel starts from here -->
+		<div class = "slide_panel_view" id = "slide_panel_view_JavaScript">
+			<a href = "#" class = "side_panel_close_button" onclick = "close_Side_Panel_View()">x</a>
+			<a href = "#">Computer/Laptop</a>
+			<a href = "#">Mobile Phones</a>
+			<a href = "#">Gaming Console</a>
+			<a href = "#">Electronic Watch</a>
+			<a href = "#">Camera</a>
+			<a href = "#">TV</a>
+		</div>
+
+		<button class = "side_panel_open_button" onclick = "open_Side_Panel_View()">☰</button>
+		<!-- The side panel ends  here -->
+
 		<h1 class="heading">ISIT207 Online Store</h1>
 	</div>
 
@@ -43,6 +57,19 @@
 
 
 
+
+	<!-- JavaScript Code starts from here onwards -->
+	<script>
+		function open_Side_Panel_View()
+		{
+			document.getElementById("slide_panel_view_JavaScript").style.width = "220px";
+		}
+
+		function close_Side_Panel_View()
+		{
+			document.getElementById("slide_panel_view_JavaScript").style.width = "0";
+		}
+	</script>
 
 </body>
 </html>
