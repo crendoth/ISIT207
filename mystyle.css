@@ -52,7 +52,7 @@ body {
 .search_bar_forum
 {
     margin: auto;
-    max-width: 450px;
+    max-width: 500px;
 }
 
 .search_bar_forum input
@@ -63,7 +63,7 @@ body {
     font-size: 18px;
     padding: 7px;
     border: 1px solid black;
-    width: 80%;
+    width: 82%;
     
 }
 
@@ -74,7 +74,7 @@ body {
     padding: 7px;
     border: 1px solid black;
     border-left: none;
-    width: 18%;
+    width: 17%;
     cursor: pointer; 
 }
 
