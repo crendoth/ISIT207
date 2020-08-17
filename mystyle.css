@@ -143,3 +143,22 @@ body {
     font-size: 25px;
 }
 /* This is for side panel and it ends here */
+/*this is for the drag and drop section (begins here)*/
+
+.drag_divs {
+
+    width: 150px;
+    height: 64px;
+    border: #d0451b solid;
+
+}
+
+.img_fit_container{
+
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+
+}
+
+/*drag and drop section ends here*/
