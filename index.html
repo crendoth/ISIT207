@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
 
-    <title>ISIT207 Online Store</title>
+	
 	<script>
 		function open_Side_Panel_View()
 		{
@@ -19,79 +20,85 @@
 		}
 
 		function dropAllowed(ev1){
-		
-			ev1.preventDefault();
+
+		ev1.preventDefault();
 
 		}
 
 		function drag_func(ev1){
-		
+
 		ev1.dataTransfer.setData("text", ev1.target.id);
-		
+
 		}
 
 		function drop_func(ev1){
-		
-			ev1.preventDefault();
-			var target_data = ev1.dataTransfer.getData("text");
-			ev1.target.appendChild(document.getElementById(target_data));
-		
+
+		ev1.preventDefault();
+		var target_data = ev1.dataTransfer.getData("text");
+		ev1.target.appendChild(document.getElementById(target_data));
+
 		}
 	</script>
-<body>
+	<body>
 
-	<div class="heading">
-		<!-- The side panel starts from here -->
-		<div class = "slide_panel_view" id = "slide_panel_view_JavaScript">
-			<a href = "#" class = "side_panel_close_button" onclick = "close_Side_Panel_View()">x</a>
-			<a href = "#">Computer/Laptop</a>
-			<a href = "#">Mobile Phones</a>
-			<a href = "#">Gaming Console</a>
-			<a href = "#">Electronic Watch</a>
-			<a href = "#">Camera</a>
-			<a href = "#">TV</a>
+		<div class="heading">
+			<!-- The side panel starts from here -->
+			<div class="slide_panel_view" id="slide_panel_view_JavaScript">
+				<a href="#" class="side_panel_close_button" onclick="close_Side_Panel_View()">x</a>
+				<a href="#">Computer/Laptop</a>
+				<a href="#">Mobile Phones</a>
+				<a href="#">Gaming Console</a>
+				<a href="#">Electronic Watch</a>
+				<a href="#">Camera</a>
+				<a href="#">TV</a>
+			</div>
+
+			<button class="side_panel_open_button" onclick="open_Side_Panel_View()">☰</button>
+			<!-- The side panel ends  here -->
+
+			<div class="banner-image">
+				<button>Locate Store</button>
+				<div class="banner-text">
+					<h1 style="font-size:40px">ISIT207 Online Store</h1>
+
+				</div>
+			</div>
 		</div>
 
-		<button class = "side_panel_open_button" onclick = "open_Side_Panel_View()">☰</button>
-		<!-- The side panel ends  here -->
-
-		<h1 class="heading">ISIT207 Online Store</h1>
-	</div>
-
-	<hr />
+		<hr />
 
 		<!-- The search bar starts from here -->
-		<div class = "search_bar_sticky">
-		<form class = "search_bar_forum">
-			<input type = "text" placeholder = "Search..." />
-			<button type = "submit">Submit</button>
-		</form>
+		<div class="search_bar_sticky">
+			<form class="search_bar_forum">
+				<input type="text" placeholder="Search..." />
+				<button type="submit">Submit</button>
+			</form>
 		</div>
 		<!-- The search bar ends here -->
-	
-	<table>
 
-		<tr>
+		<table>
 
-			<td>
-				<table>
-					<tr><td class="side_menu_data"><button class="side_menu">Cars</button></td></tr>
-					<tr><td class="side_menu_data"><button class="side_menu">Cameras</button></td></tr>
-					<tr><td class="side_menu_data"><button class="side_menu">Electronics</button></td></tr>
-					<tr><td class="side_menu_data"><button class="side_menu">Music</button></td></tr>
-					<tr><th style=" font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Drag and Drop</th></tr>
-					<tr><td class="side_menu_data"><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"><img src="summer.jpg" class="img_fit_container" draggable="true" ondragstart="drag_func(event)" id="summer_pic" /></div></td></tr>
-					<tr><td><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"></div></td></tr>
-				</table>
-			</td>
-		</tr>
+			<tr>
 
-
-
-	</table>
+				<td>
+					<table>
+						<tr><td class="side_menu_data"><button class="side_menu">Cars</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Cameras</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Electronics</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Music</button></td></tr>
+						<tr><th style=" font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Drag and Drop</th></tr>
+						<tr><td class="side_menu_data"><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"><img src="summer.jpg" class="img_fit_container" draggable="true" ondragstart="drag_func(event)" id="summer_pic" /></div></td></tr>
+						<tr><td><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"></div></td></tr>
+					</table>
+				</td>
+			</tr>
 
 
 
+		</table>
 
-</body>
+
+
+
+	</body>
 </html>
