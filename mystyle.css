@@ -46,3 +46,41 @@ body {
         top: 1px;
 
 }
+
+
+/* This is for search bar and it starts here */
+.search_bar_forum
+{
+    margin: auto;
+    max-width: 450px;
+}
+
+.search_bar_forum input
+{
+    box-sizing: border-box;
+    float: left;
+    background: #E8E8E8;
+    font-size: 18px;
+    padding: 7px;
+    border: 1px solid black;
+    width: 80%;
+    
+}
+
+.search_bar_forum button
+{
+    background: #E8E8E8;
+    font-size: 18px;
+    padding: 7px;
+    border: 1px solid black;
+    border-left: none;
+    width: 18%;
+    cursor: pointer; 
+}
+
+.search_bar_forum button:hover
+{
+    background: teal;
+}
+/* This is for search bar and it ends here */
+
