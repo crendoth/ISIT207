@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="mystyle.css" />
+
+	
+	<script>
+		function open_Side_Panel_View()
+		{
+		document.getElementById("slide_panel_view_JavaScript").style.width = "220px";
+		}
+
+		function close_Side_Panel_View()
+		{
+		document.getElementById("slide_panel_view_JavaScript").style.width = "0";
+		}
+
+		function dropAllowed(ev1){
+
+		ev1.preventDefault();
+
+		}
+
+		function drag_func(ev1){
+
+		ev1.dataTransfer.setData("text", ev1.target.id);
+
+		}
+
+		function drop_func(ev1){
+
+		ev1.preventDefault();
+		var target_data = ev1.dataTransfer.getData("text");
+		ev1.target.appendChild(document.getElementById(target_data));
+
+		}
+	</script>
+	</head>
+	<body onload='document.form1.text1.focus()'>
+
+		<div class="heading">
+
+			<div class="banner-image">
+				<!-- The side panel starts from here -->
+				<div class="slide_panel_view" id="slide_panel_view_JavaScript">
+					<a href="#" class="side_panel_close_button" onclick="close_Side_Panel_View()">x</a>
+					<a href="#">Computer/Laptop</a>
+					<a href="#">Mobile Phones</a>
+					<a href="#">Gaming Console</a>
+					<a href="#">Electronic Watch</a>
+					<a href="#">Camera</a>
+					<a href="#">TV</a>
+				</div>
+
+				<button class="side_panel_open_button" onclick="open_Side_Panel_View()">☰</button>
+				<!-- The side panel ends  here -->
+				<button>Locate Store</button>
+				<div class="banner-text">
+					<h1 style="font-size:40px">ISIT207 Online Store</h1>
+
+
+				</div>
+			</div>
+			
+
+
+		</div>
+
+		<hr />
+
+		<!-- The search bar starts from here -->
+		<div class="search_bar_sticky">
+			<form class="search_bar_forum">
+				<input type="text" placeholder="Search..." />
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<!-- The search bar ends here -->
+		<br />
+
+
+		<div id="left_box">
+					<table>
+						<tr><td class="side_menu_data" style="padding-top:7em"><button class="side_menu">Cars</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Cameras</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Electronics</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Music</button></td></tr>
+						<tr><th>Drag and Drop</th></tr>
+						<tr><td class="side_menu_data"><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"><img src="summer.jpg" class="img_fit_container" draggable="true" ondragstart="drag_func(event)" id="summer_pic" /></div></td></tr>
+						<tr><td><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"></div></td></tr>
+					</table>
+                </div>
+                
+
+                <!-- The Shopping cart starts from here -->
+
+
+        <div id="middle_box">
+            <h3> Summary
+            <div class="container">
+                <h3>Shopping Cart
+                  <span class="price" style="color:black">
+                    <i class="fa fa-shopping-cart"></i>
+                  </span>
+                </h4>
+                <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                <hr>
+                <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+            </div>
+
+    <!-- The shipping part starts from here -->
+				<div id="middle_box">
+                    <div class="row">
+                        <div class="col-50">
+                          <h3>Billing Address</h3>
+                          <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                          <input type="text" id="fname" name="firstname" pattern="[a-zA-Z]+" placeholder="Sam Jacob">
+                          <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                          <input type="text" id="email" name="email" placeholder="john@example.com">
+                          <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                          <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                          <label for="city"><i class="fa fa-institution"></i> City</label>
+                          <input type="text" id="city" name="city" placeholder="New York">
+              
+                          <div class="row">
+                            <div class="col-50">
+                              <label for="state">State</label>
+                              <input type="text" id="state" name="state" placeholder="NY">
+                            </div>
+                            <div class="col-50">
+                              <label for="zip">Zip</label>
+                              <input type="text" id="zip" name="zip" placeholder="10001">
+                            </div>
+                          </div>
+                        </div>
+              
+                        <div class="col-50">
+                          <h3>Payment</h3>
+                          <label for="fname">Accepted Cards: Visa, Mastercard, Discover, Amex</label>
+                          <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                          </div>
+                          <label for="cname">Name on Card</label>
+                          <input type="text" id="cname" name="cardname" placeholder="Sam Jacon Manuel">
+                          <label for="ccnum">Credit card number</label>
+                          <input type="text" id="ccnum" name="cardnumber" placeholder="1234-5678-9012-3456" onkeyup="validatecardnumber(this.value)>
+                          <label for="expmonth">Exp Month</label>
+                          <input type="text" id="expmonth" name="expmonth" placeholder="August">
+              
+                          <div class="row">
+                            <div class="col-50">
+                              <label for="expyear">Exp Year</label>
+                              <input type="text" id="expyear" name="expyear" placeholder="2020">
+                            </div>
+                            <div class="col-50">
+                              <label for="cvv">CVV</label>
+                              <input type="text" id="cvv" name="cvv" placeholder="123">
+                            </div>
+                          </div>
+                        </div>
+              
+                      </div>
+                      <label>
+                        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                      </label>
+                      <a href="Confirmation.html">
+                      <input type="submit" value="Continue to checkout" class="btn">
+                      </a>
+                      <script src="email-validation.js"></script>
+                    </form>
+                  </div>
+                </div>
+				</div>
+			</div>
+	</body>
+</html>
