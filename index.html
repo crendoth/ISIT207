@@ -5,7 +5,7 @@
 <head>
 
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel="stylesheet" type="text/css" href="mystyle.css" />
 
 	
 	<script>
@@ -39,6 +39,7 @@
 
 		}
 	</script>
+	</head>
 	<body>
 
 		<div class="heading">
@@ -79,30 +80,36 @@
 			</form>
 		</div>
 		<!-- The search bar ends here -->
+		<br />
 
-		<table>
-
-			<tr>
-
-				<td>
+		<div>
+		<div id="left_box">
 					<table>
 						<tr><td class="side_menu_data"><button class="side_menu">Cars</button></td></tr>
 						<tr><td class="side_menu_data"><button class="side_menu">Cameras</button></td></tr>
 						<tr><td class="side_menu_data"><button class="side_menu">Electronics</button></td></tr>
 						<tr><td class="side_menu_data"><button class="side_menu">Music</button></td></tr>
-						<tr><th style=" font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Drag and Drop</th></tr>
+						<tr><th>Drag and Drop</th></tr>
 						<tr><td class="side_menu_data"><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"><img src="summer.jpg" class="img_fit_container" draggable="true" ondragstart="drag_func(event)" id="summer_pic" /></div></td></tr>
 						<tr><td><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"></div></td></tr>
 					</table>
-				</td>
-			</tr>
-
-
-
-		</table>
-
-
-
-
+				</div>
+				<div id="middle_box">
+						<table>
+							<tr><td><div class="shopping_item"></div></td></tr>
+							<tr><td>Item 2</td></tr>
+							<tr><td>Item 3</td></tr>
+							<tr><td>Item 4</td></tr>
+							<tr><td>Item 5</td></tr>
+							<tr><td>Item 7</td></tr>
+							<tr><td>Item 8</td></tr>
+							<tr><td>Item 9</td></tr>
+							
+						</table>
+				</div>
+				<div id="right_box">
+					Shopping Cart
+				</div>
+			</div>
 	</body>
 </html>
