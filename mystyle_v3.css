@@ -43,7 +43,9 @@ body {
 
 /* This is for search bar and it starts here */
 .search_bar_forum {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     max-width: 500px;
 }
 
@@ -52,13 +54,20 @@ body {
     top: 0;
 }
 
-.search_bar_forum input {
+.search_bar_forum input
+{
     box-sizing: border-box;
     float: left;
     background: #E8E8E8;
     font-size: 18px;
     padding: 7px;
     border: 1px solid black;
+    width: 40%;
+    transition: width 0.3s ease-in-out;
+}
+
+.search_bar_forum input:focus
+{
     width: 82%;
 }
 
@@ -307,7 +316,7 @@ span.price {
 #filter_menu_box
 {
     position: absolute;
-    left: 170px;
+    left: 190px;
     top: 100px;
     width: 50%;
     background-color: #f2f2f2;
@@ -464,4 +473,25 @@ span.price {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
   }
+
+/* Adertisement One starts here*/
+.advertisement_one_caption
+{
+    position: absolute;
+    top: 350px;
+    right: 800px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.advertisement_one_video
+{
+    position: absolute;
+    top: 400px;
+    right: 600px;
+    border: 1px solid dimgray;
+}
+
+/* Adertisement One ends here*/
+
 	
