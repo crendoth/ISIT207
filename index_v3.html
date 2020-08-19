@@ -221,7 +221,15 @@
 		<!-- The search bar starts from here -->
 		<div class="search_bar_sticky">
 			<form class="search_bar_forum">
-				<input type="text" placeholder="Search..." />
+				<input type="text" placeholder="Search..." list = "searched_products"/>
+					<datalist id = "searched_products">
+						<option>iPhone Se 2nd Gen</option>
+						<option>Google Pixel 4a</option>
+						<option>One plus one nord</option>
+						<option>PS5</option>
+						<option>Television</option>
+						<option>Macbook</option>
+					</datalist>
 				<button type="submit">Submit</button>
 			</form>
 		</div>
@@ -263,7 +271,7 @@
 									<tr>
 										<td class="filter_menu_options">
 											Upper Limit:
-											<input type="text" size="3" class="filter_menu_input_box_text">
+											<input type="text" size = "3" class="filter_menu_input_box_text">
 										</td>
 									</tr>
 									<tr>
@@ -273,12 +281,9 @@
 										</td>
 									</tr>
 									<tr>
-										<td class="filter_menu_options">
+										<td class="filter_menu_options" id = "filter_menu_options_last">
 											<button id="filter_menu_price_search_button">Go</button>
 										</td>
-									</tr>
-									<tr>
-										<td class="filter_menu_options_header"><b>Brand</b></td>
 									</tr>
 								</table>
 					</td></tr>
@@ -302,7 +307,7 @@
 										<li>Easily access Netflix, YouTube and Xbox</li>
 										<li>The whole family will love it</li>
 									</ul>
-									<p align="center"><u>$2,299.00</u></p>
+									<p align-text="center"><u>$2,299.00</u></p>
 									<a href="https://www.samsung.com/au/tvs/qledtv-q80t/QA55Q80TAWXXY/" target="blank">Link to manufacturer</a>
 									<button onclick="addToCart('55 inch Q80T QLED Smart 4K TV (2020)', 2299)">Add to cart!</button>
 								</td>
@@ -323,7 +328,7 @@
 										<li>Stylish design</li>
 										<li>XDR Contrast 6x</li>
 									</ul>
-									<p align="center"><u>$2,995.00</u></p>
+									<p align-text="center"><u>$2,995.00</u></p>
 									<a href="https://store.sony.com.au/television-4K-X9500/KD65X9500H.html?gclid=Cj0KCQjw-O35BRDVARIsAJU5mQUqglPypJQ_6SCTh7Qxw_7Sa2nFZ684GqY7eqHAuhnf4e2fd3DEBBsaApXqEALw_wcB" target="blank">Link to manufacturer</a>
 									<button onclick="addToCart('65 inch KD-65X9500H FULL ARRAY LED 4K ANDROID TV', 2995)">Add to cart!</button>
 								</td>
@@ -331,7 +336,7 @@
 							<tr><td><div class="item_img"><div class="thumbwrap">
 
 									<a class="thumb" href="#">
-										<img src="item_img/camera.jpg" alt="">
+										<img src="item_img/cannoncamera.jpg" alt="">
 										<span>
 											<img src="item_img_BIG/camera.jpg" alt=""> <p>Word placeholder</p>
 										</span>

@@ -63,7 +63,6 @@ body {
     font-size: 18px;
     padding: 7px;
     border: 1px solid black;
-    border-left: none;
     width: 17%;
     cursor: pointer;
 }
@@ -252,10 +251,11 @@ img {
     border-radius: 3px;
 }
   
+/* Please change the name of this css class or id */
 input[type=text] {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 12px;
+    /* width: 100%;
+    margin-bottom: 20px; */
+    /* padding: 12px;  */
     border: 1px solid #ccc;
     border-radius: 3px;
 }
@@ -297,9 +297,9 @@ span.price {
 #filter_menu_box
 {
     position: absolute;
-    left: 220px;
-    top: 350px;
-    width: 13%;
+    left: 170px;
+    top: 5px;
+    width: 50%;
     background-color: #f2f2f2;
     border: 1px solid grey;
     border-collapse: collapse;
@@ -313,7 +313,7 @@ span.price {
 #filter_menu_price_search_button
 {
     background: #E8E8E8;
-    font-size: 15px;
+    font-size: 17px;
     border: 1px solid black;
     cursor: pointer;
 }
@@ -347,6 +347,11 @@ span.price {
 {
     padding-left: 20px;
     padding-top: 5px;
+}
+
+#filter_menu_options_last
+{
+    padding-bottom: 20px;
 }
 /* Filter Menu ends here */
 
