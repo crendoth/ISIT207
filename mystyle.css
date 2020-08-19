@@ -176,11 +176,20 @@ body {
     }
 /* end banner CSS*/
 
-.shopping_item{
-
-   
-
+/*Formatting of the item display*/
+.item_img {
+    float: left;
+    width:  600px;
+    object-fit: cover;
 }
+img {
+    float: left;
+    width:  100%;
+    object-fit: cover;
+}
+/*end formatting of the item display*/
+
+
 /* For Shopping cart start here*/
 .container {
     background-color: #f2f2f2;
