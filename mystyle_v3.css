@@ -83,10 +83,11 @@ body {
     background-color: black
 }
 
-    .side_panel_open_button:hover {
-        background-color: dimgray;
-        transition: 0.25s;
-    }
+.side_panel_open_button:hover 
+{
+    background-color: dimgray;
+    transition: 0.25s;
+}
 
 .slide_panel_view {
     width: 0;
@@ -383,4 +384,9 @@ span.price {
     left: 250px;
     z-index: 1;
 }
+
+
+
+
+
 	
