@@ -16,7 +16,7 @@ body {
     display: block;
     width: 100%;
     box-shadow: inset 0px 1px 0px 0px #cf866c;
-    background: linear-gradient(to bottom, #d0451b 5%, $bc3315 100%);
+    background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
     background-color: #d0451b;
     border-radius: 3px;
     border: 1px solid #942911;
@@ -26,15 +26,15 @@ body {
     text-shadow: 0px 1px 0px #854629;
 }
 
-    .side_menu:hover {
-        background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
-        background-color: #bc3315;
-    }
+.side_menu:hover {
+    background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+    background-color: #bc3315;
+}
 
-    .side_menu:active {
-        position: relative;
-        top: 1px;
-    }
+.side_menu:active {
+    position: relative;
+    top: 1px;
+}    
 
 
 /* This is for search bar and it starts here */
@@ -69,7 +69,7 @@ body {
 }
 
     .search_bar_forum button:hover {
-        background: teal;
+        background: lightskyblue;
     }
 /* This is for search bar and it ends here */
 
@@ -220,12 +220,12 @@ body {
     flex: 25%;
   }
   
-  .col-50 {
+.col-50 {
     -ms-flex: 50%; 
     flex: 50%;
   }
   
-  .col-75 {
+.col-75 {
     -ms-flex: 75%; 
     flex: 75%;
   }
@@ -234,36 +234,36 @@ body {
   .col-50,
   .col-75 {
     padding: 0 40px;
-  }
+}
 
 
-  .container {
+.container {
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;
-  }
+}
   
-  input[type=text] {
+input[type=text] {
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
+}
   
-  label {
+label {
     margin-bottom: 10px;
     display: block;
-  }
+}
   
-  .icon-container {
+.icon-container {
     margin-bottom: 20px;
     padding: 7px 0;
     font-size: 24px;
-  }
+}
   
-  .btn {
+.btn {
     background-color: #4CAF50;
     color: white;
     padding: 12px;
@@ -273,13 +273,71 @@ body {
     border-radius: 3px;
     cursor: pointer;
     font-size: 17px;
-  }
+}
   
-  .btn:hover {
+.btn:hover {
     background-color: #45a049;
-  }
+}
   
-  span.price {
+span.price {
     float: right;
     color: grey;
-  }
+}
+
+
+/* Filter Menu starts from here  */
+#filter_menu_box
+{
+    position: absolute;
+    left: 220px;
+    top: 350px;
+    width: 13%;
+    background-color: #f2f2f2;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.filter_menu_input_box_text
+{
+    font-size: 17px;
+}
+
+#filter_menu_price_search_button
+{
+    background: #E8E8E8;
+    font-size: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#filter_menu_price_search_button:hover
+{
+    background-color: lightskyblue;
+    transition: 0.25s;
+}
+
+#filter_menu_header_row
+{
+    background-color: dimgray;
+}
+
+#filter_menu_header
+{
+    padding-left: 5px;
+    padding-top: 10px;
+    font-size: 19px;
+}
+
+.filter_menu_options_header
+{
+    font-size: 17px;
+    padding-left: 5px;
+    padding-top: 20px;
+}
+
+.filter_menu_options
+{
+    padding-left: 20px;
+    padding-top: 5px;
+}
+/* Filter Menu ends here */
