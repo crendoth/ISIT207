@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="mystyle.css" />
+
+	
+	<script>
+		function open_Side_Panel_View()
+		{
+		document.getElementById("slide_panel_view_JavaScript").style.width = "220px";
+		}
+
+		function close_Side_Panel_View()
+		{
+		document.getElementById("slide_panel_view_JavaScript").style.width = "0";
+		}
+
+		function dropAllowed(ev1){
+
+		ev1.preventDefault();
+
+		}
+
+		function drag_func(ev1){
+
+		ev1.dataTransfer.setData("text", ev1.target.id);
+
+		}
+
+		function drop_func(ev1){
+
+		ev1.preventDefault();
+		var target_data = ev1.dataTransfer.getData("text");
+		ev1.target.appendChild(document.getElementById(target_data));
+
+		}
+
+	function setShipDate () {
+    // element to write date to  
+    var shipdate = document.getElementById("js-ship-date");
+    // Set start date to today - end date in 2 days
+    var startDate = new Date();
+    var endDate = "", noOfDaysToAdd = 4, count = 0;
+    // Map numeric month to name  
+    var month = new Array();
+      month[0] = "JAN";
+      month[1] = "FEB";
+      month[2] = "MAR";
+      month[3] = "APR";
+      month[4] = "MAY";
+      month[5] = "JUN";
+      month[6] = "JUL";
+      month[7] = "AUG";
+      month[8] = "SEP";
+      month[9] = "OCT";
+      month[10] = "NOV";
+      month[11] = "DEC";
+
+    while(count < noOfDaysToAdd){
+        // add a day to the end date each loop
+        endDate = new Date(startDate.setDate(startDate.getDate() + 1));
+        // only count when not a weekend
+        if(endDate.getDay() != 0 && endDate.getDay() != 6){
+           count++;
+        }
+    }
+  
+    // update shipdate HTML
+    shipdate.innerHTML= month[endDate.getMonth()] + ' / ' + endDate.getDate() + ' / ' + endDate.getFullYear();
+}
+
+setShipDate();
+
+	</script>
+	</head>
+	<body onload='document.form1.text1.focus()'>
+
+		<div class="heading">
+
+			<div class="banner-image">
+				<!-- The side panel starts from here -->
+				<div class="slide_panel_view" id="slide_panel_view_JavaScript">
+					<a href="#" class="side_panel_close_button" onclick="close_Side_Panel_View()">x</a>
+					<a href="#">Computer/Laptop</a>
+					<a href="#">Mobile Phones</a>
+					<a href="#">Gaming Console</a>
+					<a href="#">Electronic Watch</a>
+					<a href="#">Camera</a>
+					<a href="#">TV</a>
+				</div>
+
+				<button class="side_panel_open_button" onclick="open_Side_Panel_View()">☰</button>
+				<!-- The side panel ends  here -->
+				<button>Locate Store</button>
+				<div class="banner-text">
+					<h1 style="font-size:40px">ISIT207 Online Store</h1>
+
+
+				</div>
+			</div>
+			
+
+
+		</div>
+
+		<hr />
+
+		<!-- The search bar starts from here -->
+		<div class="search_bar_sticky">
+			<form class="search_bar_forum">
+				<input type="text" placeholder="Search..." />
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<!-- The search bar ends here -->
+		<br />
+
+
+		<div id="left_box">
+					<table>
+						<tr><td class="side_menu_data" style="padding-top:7em"><button class="side_menu">Cars</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Cameras</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Electronics</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Music</button></td></tr>
+						<tr><th>Drag and Drop</th></tr>
+						<tr><td class="side_menu_data"><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"><img src="summer.jpg" class="img_fit_container" draggable="true" ondragstart="drag_func(event)" id="summer_pic" /></div></td></tr>
+						<tr><td><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"></div></td></tr>
+					</table>
+                </div>
+				
+				<div id=middle_box">
+					<h2> THANK YOU FOR SHOPPING WITH US!</h2>
+				<video width="320" height="240" controls>
+					<source src="Australia-ad.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				  </video>
+				</div>
+
+	</body>
+</html>

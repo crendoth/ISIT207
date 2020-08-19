@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.banner-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("banner.jpg");
+  height: 18%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.banner-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.banner-image button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+}
+
+.banner-image button:hover {
+  background-color: #97b852;
+  color: white;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.fnameId,.lnameId,.dobId,.usernameId,.emailId, .mobileId,.passId, .addressId {
+    margin-top: 200px 10px;
+    width: 20%;  
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid rgba(54, 34, 34, 90); 
+    opacity: 0.6; 
+    background: lightgrey;
+            }
+.fname,.dob{
+    margin-left: 250px;
+}
+.email,.userName
+    {
+    margin-left: 250px;
+}
+.signUpButton{
+		background: darkgreen;
+		border: 0px solid darkgreen;
+		padding: 5px 185px 10px 15px;
+		color: white;
+		box-shadow: inset -1px -1px 3px darkgreen;
+		-moz-box-shadow: inset -1px -1px 3px darkgreen;
+		-webkit-box-shadow: inset -1px -1px 3px darkgreen;
+		border-radius: 3px;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+    margin-left: 515px;
+    text-align: center;
+
+    }
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  
+<!-- Javascript for form validation starts here -->
+<script type="text/javascript">
+
+  function checkPassword(str) 
+  {
+     // at least one number, one lowercase and one uppercase letter
+    // at least six characters that are letters, numbers or the underscore
+    var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/; /* Regex for password: */ 
+    return re.test(str);
+  }
+
+ 
+
+  function checkForm(form)
+  {
+    if(form.username.value == "") {
+      alert("Error: Username cannot be blank!");
+      form.username.focus();
+      return false;
+    }
+    re = /^\w+$/; /* Regex for username */ 
+    if(!re.test(form.username.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.username.focus();
+      return false;
+    }
+    if(form.password.value != "" ) {
+      if(!checkPassword(form.password.value)) {
+        alert("The password you have entered is not valid. Use atleast one number, one lowercase and one uppercase letter");
+        form.password.focus();
+        return false;
+      }
+    } 
+    return true;
+  }
+
+</script>
+
+<div class="banner-image">
+<button>Locate Store</button>
+  <div class="banner-text">
+    <h1 style="font-size:40px">ISIT207 Online Store</h1>
+	
+  </div>
+</div>
+<br><br>
+<form method="POST" action="login.html" onsubmit="return checkForm(this);">
+    <h1 align = "center">Sign Up</h1> <br>
+    <label class= "fname">First Name*</label>
+    <input type = "text" class="fnameId" name = "fname" id = "fname" placeholder=" First Name" required> &nbsp;&nbsp;&nbsp;
+    <label class= "lname">Last Name*</label>
+    <input type = "text" class="lnameId" name = "lname" id = "lname" placeholder=" Last Name" required>
+    <br><br>
+    <label class = "dob">D.O.B*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = "date" class = "dobId" name ="dob" id = "dob" required> &nbsp;&nbsp;&nbsp;
+    <label class = "address">Address</label> &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = "text" class = "addressId" name  ="address" id = "address" placeholder = "Address">
+    <br><br>
+    <label class = "userName"> Username*</label>&nbsp;
+    <input type = "text" class = "usernameId" name ="username" id = "username" placeholder ="User Name" required> &nbsp;&nbsp;&nbsp;
+    <label class = "password">Password*</label>&nbsp;
+    <input type = "password" class = "passId" name ="password" id = "password" placeholder ="Password" required>
+    <br><br>
+    <label class = "email"> Email*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = "text" class = emailId name = "email" id = "email" placeholder = "Email" required>&nbsp;&nbsp;&nbsp;&nbsp;
+    <label class = "mobile"> Mobile*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = "text" class = "mobileId" name ="mobile" id = "mobile" placeholder ="Mobile" required>
+    <br><br>
+    <button type ="submit" class = "signUpButton" name = "createId" id = "createId">Sign Up</button>
+
+
+</form>
+
+
+
+</body>
+</html>

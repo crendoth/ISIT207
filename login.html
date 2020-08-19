@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.banner-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("banner.jpg");
+  height: 18%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.banner-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.banner-image button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+}
+
+.banner-image button:hover {
+  background-color: #97b852;
+  color: white;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.id{
+    margin-top: 200px 10px;
+    width: 25%;  
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid rgba(54, 34, 34, 90); 
+    opacity: 0.6; 
+    background: lightgrey;
+            }
+.password{
+    margin-top: 200px 10px;
+    width: 25%;  
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid rgba(54, 34, 34, 90); 
+    opacity: 0.6; 
+    background: lightgrey;
+
+}
+.idLabel{
+    margin-left: 450px;
+}
+.passLabel{
+    margin-top: 400px;
+    margin-left: 400px;
+}
+ .loginButton{
+		background: darkgreen;
+		border: 1px solid darkgreen;
+		padding: 5px 15px 5px 15px;
+		color: white;
+		box-shadow: inset -1px -1px 3px darkgreen;
+		-moz-box-shadow: inset -1px -1px 3px darkgreen;
+		-webkit-box-shadow: inset -1px -1px 3px darkgreen;
+		border-radius: 3px;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;	
+        font-weight: bold;
+        margin-left: 515px;
+    }
+    .createIdButton{
+		background: rgb(71, 130, 240);
+		border: 0px solid rgb(71, 130, 240);
+		padding: 5px 185px 10px 15px;
+		color: white;
+		box-shadow: inset -1px -1px 3px rgb(71, 130, 240);
+		-moz-box-shadow: inset -1px -1px 3px rgb(71, 130, 240);
+		-webkit-box-shadow: inset -1px -1px 3px rgb(71, 130, 240);
+		border-radius: 3px;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+    margin-left: 515px;
+    text-align: center;
+
+    }
+    ::placeholder{
+        color: black;
+    }
+    input[type = checkbox]{
+        margin-left: 510px;
+    }
+    .forgetPass{
+        margin-left: 510px;
+    }
+
+
+
+</style>
+</head>
+<body>
+
+<div class="banner-image">
+<button>Locate Store</button>
+  <div class="banner-text">
+    <h1 style="font-size:40px">ISIT207 Online Store</h1>
+	
+  </div>
+  
+</div>
+<br><br>
+    
+    <form id="login" method="get" action="index.html">
+        <label class= "idLabel">Enter ID</label>
+        <input type = "text" class="id" name = "id" id = "id" placeholder=" Username" required>
+        <br><br>
+        <label class= "passLabel">Enter Password</label>
+        <input type = "password" class = "password" name = "password" id = "password" placeholder=" Password" required>
+        <br><br>
+        <input type = "submit" class="loginButton" name ="submit" id = "submit">
+        <br><br>
+        <input type = "checkbox" class = "remember" name ="remember" id = "remember">
+        <label class = "rememberLabel">Remember Password</label>
+        <br>
+        <!--<a  class = "forgetPass" href = "forgetId.html">Forgotten Password? </a>-->
+    </form>
+    <br>
+
+    <form id ="createId" method = "get" action ="createId.html">
+        <button type ="submit" class = "createIdButton" name = "createId" id = "createId">Create New Account</button>
+
+    </form>
+    
+
+
+</body>
+</html>
