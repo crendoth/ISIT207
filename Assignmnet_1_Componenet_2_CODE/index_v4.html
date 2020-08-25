@@ -1,0 +1,239 @@
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="mystyle_v4.css" />
+	<script src="myscript_v4.js"></script>
+	</head>
+
+
+	<body>
+
+		<div class="heading">
+
+			<div class="banner-image">
+				<!-- The side panel starts from here -->
+				<div class="slide_panel_view" id="slide_panel_view_JavaScript">
+					<a href="#" class="side_panel_close_button" onclick="close_Side_Panel_View()">x</a>
+					<a href="#">Computer/Laptop</a>
+					<a href="#">Mobile Phones</a>
+					<a href="#">Gaming Console</a>
+					<a href="#">Electronic Watch</a>
+					<a href="#">Camera</a>
+					<a href="#">TV</a>
+				</div>
+
+				<button class="side_panel_open_button" onclick="open_Side_Panel_View()">☰</button>
+				<!-- The side panel ends  here -->
+
+
+				<button type="button" onclick="showPosition();" value="Get Location">Locate Store</button>
+				<div id="embedMap" style="width: 400px; height: 300px;">
+					<!--Google map will be embedded here-->
+				</div>
+
+				<div class="banner-text">
+					<h1 style="font-size:40px">ISIT207 Online Store</h1>
+
+
+				</div>
+			</div>
+		</div>   
+		<hr />
+			
+		</div>
+		<!-- The search bar starts from here -->
+		<div class="search_bar_sticky">
+			<form class="search_bar_forum">
+				<input type="text" placeholder="Search..." list = "searched_products"/>
+					<datalist id = "searched_products">
+						<option>iPhone Se 2nd Gen</option>
+						<option>PS5</option>
+						<option>Television</option>
+						<option>Macbook</option>
+					</datalist>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<!-- The search bar ends here -->
+		<br />
+
+		<div class="row">
+		<div id="left_box">
+					<table>
+						<tr><td class="side_menu_data" style="padding-top:7em"><button class="side_menu">Cars</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Cameras</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Electronics</button></td></tr>
+						<tr><td class="side_menu_data"><button class="side_menu">Music</button></td></tr>
+						<tr><th>Drag and Drop</th></tr>
+						<tr><td class="side_menu_data"><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"><img src="summer.jpg" class="img_fit_container" draggable="true" ondragstart="drag_func(event)" id="summer_pic" /></div></td></tr>
+						<tr><td><div class="drag_divs" ondrop="drop_func(event)" ondragover="dropAllowed(event)"></div></td></tr>
+					</table>
+		<table>
+			<tr><td>
+								<table id="filter_menu_box">
+									<tr id="filter_menu_header_row">
+										<th id="filter_menu_header">Filter Menu</th>
+									</tr>
+									<tr>
+										<td class="filter_menu_options_header"><b>Availability</b></td>
+									</tr>
+									<tr>
+										<td class="filter_menu_options">
+											<input type="checkbox">Available Now
+										</td>
+									</tr>
+									<tr>
+										<td class="filter_menu_options">
+											<input type="checkbox">Available Soon
+										</td>
+									</tr>
+
+									<tr>
+										<td class="filter_menu_options_header"><b>Price</b></td>
+									</tr>
+									<tr>
+										<td class="filter_menu_options">
+											Upper Limit:
+											<input type="text" size = "3" class="filter_menu_input_box_text">
+										</td>
+									</tr>
+									<tr>
+										<td class="filter_menu_options">
+											Lower Limit:
+											<input type="text" size="3" class="filter_menu_input_box_text">
+										</td>
+									</tr>
+									<tr>
+										<td class="filter_menu_options">
+											<button id="filter_menu_price_search_button">Go</button>
+										</td>
+									</tr>
+									<tr>
+										<td class="filter_menu_options_header"><b>Delivery Date:</b></td>
+									</tr>
+									<tr>
+										<td class="filter_menu_options" id = "filter_menu_options_last">
+											<input type = "date" />
+										</td>
+									</tr>
+								</table>
+					</td></tr>
+					</table>
+				</div>
+			</div>
+
+			<span class = "advertisement_one_caption">Brand New Phones!</span>
+			<figure>
+				<iframe width="350" height="200" src="https://www.youtube.com/embed/SQIbeAk-bFA?autoplay=1&playlist=SQIbeAk-bFA&loop=1&controls=0" class = "advertisement_one_video">
+					<figcaption>
+						iPhone SE 2020
+					</figcaption>
+				</iframe>
+			</figure>
+
+			<body onload="colorinit(); cycleColors(); classinit(); cycleColors_1()">
+			<span class = "offer_title"> Limited Time <span class="red" id="offer">OFFER</span> on Digital Cameras!</span>
+			</body>
+
+				<div id="middle_box">
+						<table border="0">
+							<tr><td><div class="thumbwrap">
+								<a class="thumb" id='bannerLink1' href="#"><img src="" id='img1' onload="changeImages()" ></a>
+								</div></td>
+								<td><h2>55" Q80T QLED Smart 4K TV (2020)</h2>
+									<ul>
+										<li>200Hz Motion Rate</li>
+										<li>Samsung Intelligent Mode</li>
+										<li>Easily access Netflix, YouTube and Xbox</li>
+										<li>The whole family will love it</li>
+									</ul>
+									<p align-text="center"><u>$2,299.00</u></p>
+									<button onclick="makeNewWindow()">Link to manufacturer</button> 
+									<!-- <a href="https://www.samsung.com/au/tvs/qledtv-q80t/QA55Q80TAWXXY/" target="blank">Link to manufacturer</a>-->
+									<button onclick="addToCart('55 inch Q80T QLED Smart 4K TV (2020)', 2299)">Add to cart!</button>
+								</td>
+							</tr>
+							<tr><td><div class="item_img"><div class="thumbwrap">
+									<a class="thumb" href="https://store.sony.com.au/television-4K-X9500/KD65X9500H.html?gclid=Cj0KCQjw-O35BRDVARIsAJU5mQUqglPypJQ_6SCTh7Qxw_7Sa2nFZ684GqY7eqHAuhnf4e2fd3DEBBsaApXqEALw_wcB" 
+									onmouseover="imageOn('second'); return setMsg('second');" 
+									onmouseout="imageOff('second'); return setMsg('');">
+									<img src="item_img/sonytv.jpg" name="second" id="second" height="200" width="300" 
+									border="0" alt= "second">
+										<span>
+											<img src="item_img_BIG/sonytv.jpg" alt=""> <p>Word placeholder</p>
+										</span>
+									</a>
+								</div></div></td>
+								<td>
+									<h2>65" KD-65X9500H FULL ARRAY LED 4K ANDROID TV</h2>
+									<ul>
+										<li>Works with Google home</li>
+										<li>Voice activated</li>
+										<li>Stylish design</li>
+										<li>XDR Contrast 6x</li>
+									</ul>
+									<p align-text="center"><u>$2,995.00</u></p>
+									<a href="https://store.sony.com.au/television-4K-X9500/KD65X9500H.html?gclid=Cj0KCQjw-O35BRDVARIsAJU5mQUqglPypJQ_6SCTh7Qxw_7Sa2nFZ684GqY7eqHAuhnf4e2fd3DEBBsaApXqEALw_wcB" target="blank">Link to manufacturer</a>
+									<button onclick="addToCart('65 inch KD-65X9500H FULL ARRAY LED 4K ANDROID TV', 2995)">Add to cart!</button>
+								</td>
+							</tr>
+							<tr><td><div class="item_img"><div class="thumbwrap">
+
+									<a class="thumb" href="https://www.amazon.ae/Canon-24-105mm-Digital-Mirrorless-Camera/dp/B07H489ZP4/ref=asc_df_B07H489ZP4/?tag=googleshopp09-21&linkCode=df0&hvadid=386288080682&hvpos=&hvnetw=g&hvrand=8957322241302245829&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000013&hvtargid=pla-570890851108&psc=1" 
+									onmouseover="imageOn('third'); return setMsg('third');" 
+									onmouseout="imageOff('third'); return setMsg('');">
+										<img src="item_img/cannoncamera.jpg" name="third" id="third" height="200" width="300" 
+										border="0" alt= "third">
+										<span>
+											<img src="item_img_BIG/camera.jpg" alt=""> <p>Word placeholder</p>
+										</span>
+									</a>
+								</div></div></td>
+								<td>
+									<h2>Canon EOS R With RF 24-105mm</h2>
+									<ul>
+										<li>30. 3 Megapixel Full-frame CMOS Sensor and DIGIC 8 Image processor</li>
+										<li>Dual Pixel CMOS AF with 5, 655 manually selectable AF points</li>
+										<li>4K 30P with Canon log and 10 bit 4: 2: 2 HDMI output</li>
+										<li>Built-in EVF with 3. 69 million dots,</li>
+										<li> How to use? </li>
+										<iframe width="300" height="200" src="https://www.youtube.com/embed/gQq1BS0RWYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</iframe>
+									</ul>
+									<p align-text="center"><u>$800.00</u></p>
+									<a href="https://www.amazon.ae/Canon-24-105mm-Digital-Mirrorless-Camera/dp/B07H489ZP4/ref=asc_df_B07H489ZP4/?tag=googleshopp09-21&linkCode=df0&hvadid=386288080682&hvpos=&hvnetw=g&hvrand=8957322241302245829&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000013&hvtargid=pla-570890851108&psc=1" target="blank">Link to manufacturer</a>
+									<button onclick="addToCart('Canon EOS R With RF 24-105mm', 800)">Add to cart!</button>
+
+								</td>
+							</tr>
+						</table>
+				</div>
+
+				<div id="right_box">
+					<div class="container">
+						<h3>Shopping Cart</h3>
+						<span class="price" style="color:black">
+							<i class="fa fa-shopping-cart"></i>
+						</span>
+						<section id="items_html">
+						</section>
+						<hr />
+						<p>Total <span class="price" style="color:black"><b>$<span id="price_total">0</span></b></span></p>
+					</div>
+					<div>
+					<form onsubmit="">
+						<br>
+						<label>Enter Coupon Code: <input type="text" name="coupon" id="in" class="coupon" title="Enter coupon" >
+						<span id="usernameError"></span></label>
+						<input type="button" id="myBtn" value="Apply" onClick="validate(coupon)" /></form>
+						<span id="message"></span>
+						<span id="err"></span>
+						</div>
+					<button value="to_checkout" class="btn" onclick="submit_stuff()">Continue to Checkout</button>
+					<section id="out">
+					</section>
+				</div>
+			</div>
+	</body>
+</html>
