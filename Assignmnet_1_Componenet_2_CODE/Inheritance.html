@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Inheritance and Static Method Practice</h2>  
+    <p id = "demo"></p>
+
+    <script>
+        class Student{
+            constructor(name){
+                this.sName = name;
+            }
+            detail(){
+                return 'My Name is ' + this.sName;
+            }
+            static check(){
+                return '<h2> This is a static method can be called without creating an object<h2/>';
+            }
+        }
+
+        class Details extends Student{
+            constructor(name, course, year){
+            super(name);
+            this.sCourse = course;
+            this.sYear = year
+           }
+           print(){
+               return  this.detail() + ', I am studying ' + this.sCourse + ' and I am in ' + this.sYear + ' year';              
+            }
+        }
+
+        student1 = new Details ("Muhammad Shahroz", "BSIT", "Third");
+        student2 = new Details ("Lachlan Jhones", "BSIT", "Third");
+        student3 = new Details ("Connor Rendoth", "BSIT", "Third");
+        student4 = new Details ("Rafat Kabir", "BSCS", "Third");
+        student5 = new Details ("Lokesh Bhatia", "BSIT", "Third");
+        student6 = new Details ("Curtis Charlesworth", "BSIT", "Third");
+
+        document.getElementById("demo").innerHTML = student1.print() + "<br/><br/>" + student2.print() + "<br/><br/>" + student3.print() + "<br/><br/>" + student4.print() + "<br/><br/>" + student5.print() + "<br/><br/>" + student6.print() + "<br/><br/>" +  Student.check();  
+        
+    </script>
+    
+</body>
+</html>

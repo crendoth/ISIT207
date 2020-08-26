@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Constructor and prototype Practice</h2>  
+    <p id = "demo"></p>
+
+    <script>
+        function Student(firstName, lastName, studentNumber, age, course)
+            {
+                this.fName = firstName;
+                this.lName = lastName;
+                this.id = studentNumber;
+                this.age = age;
+                this.degree = course;
+            }   
+
+        Student.prototype.details = function ()
+            {
+             return "First Name: " + this.fName + "<br/>" + " Last Name: " + this.lName + "<br/>" +  " Student id: " + this.id + "<br/>" + " Age: " + this.age + "<br/>" +  " Course: " + this.degree 
+            };
+
+  
+
+            var teamDetails1 = new Student("Muhammad", "Shahroz", 6111348, 25, "BSIT");
+            var teamDetails2 = new Student("Lachlan", "Jhones", 123456, 20, "BSIT");
+            var teamDetails3 = new Student("Connor", "Rendoth", 5963370, 23, "BSIT");
+            var teamDetails4 = new Student("Rafat", "Kabir", 6359139, 20, "BSCS");
+            var teamDetails5 = new Student("Lokesh", "Bhatia", 123456, 20, "BSIT");
+            var teamDetails6 = new Student("Curtis", "Charlesworth", 123456, 20, "BSIT");
+
+            document.getElementById("demo").innerHTML = 
+            "My Team Details Are as follow " + "<br/><br/>" + teamDetails1.details() + "<br/><br/>" + teamDetails2.details() + "<br/><br/>" + teamDetails3.details() + "<br/><br/>" + teamDetails4.details() +  "<br/><br/>" + teamDetails5.details() + "<br/><br/>" + teamDetails6.details(); 
+
+    </script>
+    </body>
+    </html>
