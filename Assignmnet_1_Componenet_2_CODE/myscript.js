@@ -305,7 +305,7 @@ function component2_1(){
 	var arr_pattern_6 = new Array(20);
 	arr_strings.forEach((element, index, arr) => {
 	
-		if (pattern6.test(element)){
+		if (!pattern6.test(element)){
 		
 			arr_pattern_6[index] = "";
 
