@@ -1,4 +1,8 @@
-// start coding
+
+
+function priceSearch()
+
+function colourSearch() 
 
 var car = {type:"Jeep", price:20000, color:"black"};
 var car2 = {type:"Holden", price:1000, color:"red"};
