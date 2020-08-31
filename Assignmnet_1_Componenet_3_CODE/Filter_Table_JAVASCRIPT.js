@@ -1,8 +1,3 @@
-
-
-function priceSearch()
-
-function colourSearch() 
 // start coding
 
 var cars = [
@@ -30,5 +25,17 @@ var cars = [
 
 
 var t = "<table>";
-for(var i = 0; i < )
-      
+for(var i = 0; i < cars.length; i++)
+{
+    var tr = "<tr>";
+
+    tr += "<td>" + cars[i].type + "</td>";
+    tr += "<td>" + cars[i].price + "</td>";
+    tr += "<td>" + cars[i].color + "</td>";
+    tr += "</tr>";
+    t += tr;
+}
+
+t = t + "</table>";
+
+document.getElementById("table").innerHTML = t;
