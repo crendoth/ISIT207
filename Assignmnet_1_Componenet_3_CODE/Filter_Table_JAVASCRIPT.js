@@ -63,10 +63,13 @@ function priceSearch()
 
             if(output_value.toLowerCase().indexOf(value_converter) > -1)
             {
-                table_row[i].style.display = "";
+                // to display the searched result
+                table_row[i].style.color = "Red";
+                table_row[i].style.display;
             }
             else
             {
+                // if input not found then display nothing
                 table_row[i].style.display = "none";
             }
         }
