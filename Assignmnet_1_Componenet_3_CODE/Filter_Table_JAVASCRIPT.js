@@ -43,15 +43,16 @@ document.getElementById("table").innerHTML = t;
 // functions
 function priceSearch()
 {
-    let price_input, filter, filter_table, table_row, table_data, output_value;
+    let price_input = document.getElementById("myInput1");
 
-    price_input = document.getElementById("myInput1");
+    let value_converter = price_input.value.toLowerCase();
 
-    filter = price_input.value.toUpperCase();
+    let filter_table = document.getElementById("table")
 
-    filter_table = document.getElementById("table")
-
-    table_row = filter_table.getElementsByTagName("tr");
+    let table_row = filter_table.getElementsByTagName("tr");
+    
+    // these variables will be used inside the loop
+    let table_data, output_value;
 
     for(let i = 0; i < table_row.length; i++)
     {
@@ -60,7 +61,7 @@ function priceSearch()
         {
             output_value = table_data.innerText;
 
-            if(output_value.toUpperCase().indexOf(filter) > -1)
+            if(output_value.toLowerCase().indexOf(value_converter) > -1)
             {
                 table_row[i].style.display = "";
             }
