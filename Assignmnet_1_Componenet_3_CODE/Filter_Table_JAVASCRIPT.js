@@ -76,3 +76,6 @@ function priceSearch()
         }
     }
 }
+
+
+// need a reset button function
