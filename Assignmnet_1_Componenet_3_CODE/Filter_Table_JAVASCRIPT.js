@@ -43,5 +43,31 @@ document.getElementById("table").innerHTML = t;
 // functions
 function priceSearch()
 {
+    var price_input, filter, filter_table, table_row, table_data, output_value;
 
+    price_input = document.getElementById("myInput1");
+
+    filter = price_input.value.toUpperCase();
+
+    filter_table = document.getElementById("table")
+
+    table_row = filter_table.getElementsByTagName("tr");
+
+    for(var i = 0; i < table_row.length; i++)
+    {
+        table_data = table_row[i].getElementsByTagName("td")[1];
+        if(table_data)
+        {
+            output_value = table_data.innerText;
+
+            if(output_value.toUpperCase().indexOf(filter) > -1)
+            {
+                table_row[i].style.display = "";
+            }
+            else
+            {
+                table_row[i].style.display = "none";
+            }
+        }
+    }
 }
