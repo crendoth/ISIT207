@@ -24,7 +24,7 @@ var cars = [
 ]
 
 
-var t = "<table>";
+var t = "";
 for(var i = 0; i < cars.length; i++)
 {
     var tr = "<tr>";
@@ -36,6 +36,12 @@ for(var i = 0; i < cars.length; i++)
     t += tr;
 }
 
-t = t + "</table>";
 
 document.getElementById("table").innerHTML = t;
+
+
+// functions
+function priceSearch()
+{
+
+}
