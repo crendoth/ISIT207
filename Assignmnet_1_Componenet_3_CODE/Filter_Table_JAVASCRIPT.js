@@ -43,7 +43,7 @@ document.getElementById("table").innerHTML = t;
 // functions
 function priceSearch()
 {
-    var price_input, filter, filter_table, table_row, table_data, output_value;
+    let price_input, filter, filter_table, table_row, table_data, output_value;
 
     price_input = document.getElementById("myInput1");
 
@@ -53,7 +53,7 @@ function priceSearch()
 
     table_row = filter_table.getElementsByTagName("tr");
 
-    for(var i = 0; i < table_row.length; i++)
+    for(let i = 0; i < table_row.length; i++)
     {
         table_data = table_row[i].getElementsByTagName("td")[1];
         if(table_data)
