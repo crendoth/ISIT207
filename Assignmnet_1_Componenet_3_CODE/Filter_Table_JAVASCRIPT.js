@@ -25,7 +25,7 @@ var cars = [
 
 
 var t = "";
-for(var i = 0; i < cars.length; i++)
+for(let i = 0; i < cars.length; i++)
 {
     var tr = "<tr>";
 
