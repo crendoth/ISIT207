@@ -65,6 +65,7 @@ function priceSearch()
             {
                 // to display the searched result
                 table_row[i].style.color = "Red";
+                table_row[i].style.outline = "solid green";
                 table_row[i].style.display;
             }
             else
