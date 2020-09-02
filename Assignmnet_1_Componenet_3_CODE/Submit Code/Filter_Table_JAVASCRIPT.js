@@ -1,4 +1,3 @@
-// start coding
 
 var cars = [
     {
@@ -229,7 +228,7 @@ function priceSearch()
 {
     let price_input = document.getElementById("myInput1");
 
-    let value_converter = price_input.value.toLowerCase();
+    let value_converter = price_input.value;
 
     let filter_table = document.getElementById("table");
 
@@ -251,7 +250,6 @@ function priceSearch()
 
                 // to display the searched result
                 table_row[i].style.color = "Red";
-                table_row[i].style.outline = "solid green";
                 table_row[i].style.display;
             }
             else if(output_value.toLowerCase().indexOf(value_converter) == -1)
@@ -291,7 +289,6 @@ function colourSearch()
 
                 // to display the searched result
                 table_row[i].style.color = "Red";
-                table_row[i].style.outline = "solid green";
                 table_row[i].style.display;
             }
             else if(output_value.toLowerCase().indexOf(value_converter) == -1)
@@ -309,15 +306,15 @@ function colourSearch()
 // to reset the filtered table and the input fields
 function resetButton()
 {
-    let filter_table = document.getElementById("table");
+    
+	
+	let filter_table = document.getElementById("table");
     let price_input = document.getElementById("myInput1");
     let color_input = document.getElementById("myInput2");
 
 
-    if(colour_Search == true || price_Search == true)
-    {
         price_input.value = "";
         color_input.value = "";
         filter_table.innerHTML = t;
-    }
+ 
 }
