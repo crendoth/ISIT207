@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+        <style>
+            #heading1
+            {
+                text-align: center;
+            }
+
+            #table
+            {
+                width: 13%;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <h2 id = "heading1">Filter Table</h2>
+
+        <br/>
+        <br/>
+
+        <!-- input fields for filtering the table -->
+        <input type = "text" id = "myInput1" onkeyup = "priceSearch()" placeholder = "Search for prices..">
+        <input type = "text" id = "myInput2" onkeyup = "colourSearch()" placeholder = "Search for car colours..">
+
+        <!-- reset button to reset the filtered table and the input fields -->
+        <button onclick = "resetButton()">
+            RESET
+        </button>
+
+        <br/>
+        <br/>
+
+        <table id = "table" style = "border: 1px solid grey">
+        </table>
+
+    </body>
+
+
+    <script type = "text/javascript" src = "Filter_Table_JAVASCRIPT.js">
+    </script>
+    
+
+
+</html>
