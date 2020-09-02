@@ -9,10 +9,20 @@
 
             #table
             {
-                width: 13%;
-            }
-        </style>
+                width: 40%;
+				margin-left:auto; 
+				margin-right:auto;
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+            
+			
+			tr:nth-child(even){background-color: #f2f2f2;}
 
+			tr:hover {background-color: #ddd;}
+			
+			.allInputs {text-align: center;}
+        </style>
     </head>
 
     <body>
@@ -23,13 +33,15 @@
         <br/>
 
         <!-- input fields for filtering the table -->
+		<div class="allInputs">
         <input type = "text" id = "myInput1" onkeyup = "priceSearch()" placeholder = "Search for prices..">
-        <input type = "text" id = "myInput2" onkeyup = "colourSearch()" placeholder = "Search for car colours..">
+        <input type = "text" id = "myInput2" onkeyup = "colourSearch()" placeholder = "Search for car colours.." >
 
         <!-- reset button to reset the filtered table and the input fields -->
         <button onclick = "resetButton()">
             RESET
         </button>
+		</div>
 
         <br/>
         <br/>
@@ -46,3 +58,4 @@
 
 
 </html>
+
