@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <meta charset = "utf-8" />
+ <head>
+    <script type = "text/javascript"  src = "main.js" >
+    </script>
+    
+    <style type = "text/css">
+        .animal1 {position: absolute; top: 100px; left: 220px; width: 150px; height:150px;
+                 z-index: 0;}
+        .animal2 {position: absolute; top: 150px; left: 330px; width: 150px; height:150px;
+                 z-index: 0;}
+        .animal3 {position: absolute; top: 200px; left: 440px; width: 150px; height:150px;
+                 z-index: 0;}
+        .animal4 {position: absolute; top: 250px; left: 550px; width: 150px; height:150px;
+                 z-index: 0;}
+        .animal5 {position: absolute; top: 300px; left: 660px; width: 150px; height:150px;
+                 z-index: 0;}
+        .dice { 
+            width:50px;
+            height:50px;
+        }
+        .red { background-color: red;
+        }
+        .blue { background-color: blue;
+        }
+}
+
+    </style>
+  
+</head>
+    <body>
+        <h1>Assignment 2 - Component 1</h1>
+        <h2>Task 1-4</h2>
+        <!--   Illustrates dynamic stacking of images -->
+<br>
+        <p>
+            <img class = "animal1"  id = "animal-image-1"
+                 src = "images/animal-image-1.jpg"
+                 alt = "(Picture of a monkey)" 
+                 onclick = "toTop('animal-image-1')" />
+            <img class = "animal2"  id = "animal-image-2"
+                 src = "images/animal-image-2.jpg"
+                 alt = "(Picture of an turtle)"
+                 onclick = "toTop('animal-image-2')" />
+             <img class = "animal3"  id = "animal-image-3"
+                 src = "images/animal-image-3.jpg"
+                 alt = "(Picture of an bear)"
+                 onclick = "toTop('animal-image-3')" />
+            <img class = "animal4"  id = "animal-image-4"
+                 src = "images/animal-image-4.jpg"
+                 alt = "(Picture of an dog)"
+                 onclick = "toTop('animal-image-4')" />
+             <img class = "animal5"  id = "animal-image-5"
+                 src = "images/animal-image-5.jpg"
+                 alt = "(Picture of an giraffe)"
+                 onclick = "toTop('animal-image-5')" />
+      </p>
+
+      <h2>Task 1-5</h2>
+      <!--   Dice -->
+      <img src="images/1.png" id="dice" style="width:100px"/> <br/> <br/>
+      <button type="button" onclick="rollDice();">Roll the dice</button> 
+
+
+    <br><br>
+
+      <h2>Task 1-6</h2>
+      <!--   Task 1-6: Odd/even -->
+      <table id="task2" style="border:100px" id="task2table" width="50%">
+        <tr>
+            <th>Name</th>
+            <th>Student Number</th>
+            <th>Group</th>
+          </tr>
+        <tr><td> Product 1 </td><td>Product 2</td><td>Product 3</td></tr>
+        <tr><td> Product 1 </td><td>Product 2</td><td>Product 3</td></tr>
+        <tr><td> Product 1 </td><td>Product 2</td><td>Product 3</td></tr>
+        <tr><td> Product 1 </td><td>Product 2</td><td>Product 3</td></tr>
+        <tr><td> Product 1 </td><td>Product 2</td><td>Product 3</td></tr>
+        <tr><td> Product 1 </td><td>Product 2</td><td>Product 3</td></tr>
+</table>
+<button> Even button</button>
+<button> Odd button</button>
+<br>
+
+</body>
+</html>
+
+
