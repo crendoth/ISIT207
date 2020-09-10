@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Task 1-8: Car Back/Forth</title>
+		<style>
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+
+			var slideDir = "r";
+
+			TimInterval=2000;
+           function slideRight() {
+
+				slideDir = "r";
+
+				// slide to right
+				$("#block").animate({
+					left: "800px"
+				}, TimInterval, function() {
+					slideLeft();
+				});
+			}
+
+			function slideLeft() {
+
+				slideDir = "l";
+
+				// slide to right
+				$("#block").animate({
+					left: "0px"
+				}, TimInterval, function() {
+					slideRight();
+				});
+			}
+			$(document).ready(function() {
+				$("#start").on("click", function() {
+					if (slideDir == "r") {
+						slideRight();
+					} else {
+						slideLeft();
+					}
+					
+				});
+
+				
+				$("#stop").on("click", function() {
+					$("#block").stop(true);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="start">start</button>
+		<button id="stop">stop</button> <br/>
+        <img src="images/car.png" id="block" style="position:absolute"/>
+    </div>
+    </body>
+</html>

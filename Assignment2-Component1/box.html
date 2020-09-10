@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Task 1-8: Box Up/Down</title>
+		<style>
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+
+var slideDir = "d";
+
+TimInterval=1000;
+TimInterval2=2000;
+
+function slideDown() {
+
+				slideDir = "d";
+
+				// slide to down
+				$("#block").animate({
+					top: "200px"
+				}, TimInterval, function() {
+					slideUp();
+				});
+
+                $("#block2").animate({
+					top: "200px"
+				}, TimInterval2, function() {
+					slideUp();
+				});
+			}
+
+function slideUp() {
+
+				slideDir = "u";
+
+				// slide to up
+				$("#block").animate({top: "15px"}, TimInterval, function() {
+					slideDown();
+				});
+                // slide to up
+				$("#block2").animate({top: "15px"}, TimInterval2, function() {
+					slideDown();
+				});
+			}
+
+$(document).ready(function() {
+				$("#start").on("click", function() {
+					if (slideDir == "d") {
+						slideDown();
+					} else {
+						slideUp();
+					}
+					
+				});
+                
+                $("#stop").on("click", function() {
+					$("#block").stop(true);
+                    $("#block2").stop(true)
+				});
+			});
+
+
+
+		</script>
+	</head>
+	<body>
+		<button id="start">start</button>
+		<button id="stop">stop</button> <br/>
+        <img id="block" style="background:teal;height:100px;width:100px;position:absolute;"/>
+        <img id="block2" style="background:#98bf21;height:100px;left:200px;width:100px;position:absolute;"/>
+    </div>
+    </body>
+</html>
