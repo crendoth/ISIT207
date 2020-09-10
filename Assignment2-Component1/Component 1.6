@@ -1,0 +1,106 @@
+
+<html>
+
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script>
+	var evenClicks = 0;
+	var oddClicks = 0;
+	
+	$(document).ready(function(){
+	$("#even").click(function() {
+			if(evenClicks == 0) {
+				$("tr:odd").css("background-color", "green");
+				evenClicks++;
+			} else {
+				$("tr:odd").css("background-color", "red");
+				evenClicks = 0;
+				}
+			});
+	
+	$("#odd").click(function() {
+			if(oddClicks == 0) {
+				$("tr:even").css("font-family", "Times New Roman, Times, serif");
+				oddClicks++;
+			} else {
+				$("tr:even").css("font-family", "Lucida Console, Courier, monospace");
+				oddClicks = 0;
+				}
+			});
+			
+		});
+</script>
+<style>
+table, td,th {
+  text-align: center;
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {
+	background: red
+}
+
+tr:nth-child(odd) {
+	font-family: "Comic Sans MS", cursive, sans-serif
+	}
+	
+</style>
+</head>
+
+<body>
+<h1>Assignment 2 - Component 1</h1>
+<h2>Task 1-6</h2>
+<br/>
+<br/>
+<table style="width:70%">
+	<tr>
+		<th>Name</th>
+		<th>Position</th>
+		<th>Age</th>
+	</tr>
+	<tr>
+		<td>John</td>
+		<td>CEO</td>
+		<td>43</td>
+	</tr>
+	<tr>
+		<td>Mike</td>
+		<td>Assistant</td>
+		<td>32</td>
+	</tr>
+	<tr>
+		<td>Jan</td>
+		<td>Head of Staff</td>
+		<td>59</td>
+	</tr>
+	<tr>
+		<td>Sam</td>
+		<td>Security</td>
+		<td>22</td>
+	</tr>
+	<tr>
+		<td>Maeve</td>
+		<td>Head of Art</td>
+		<td>20</td>
+	</tr>
+	<tr>
+		<td>Adam</td>
+		<td>Software engineer</td>
+		<td>23</td>
+	</tr>
+	<tr>
+		<td>Bobby</td>
+		<td>Janitor</td>
+		<td>66</td>
+	</tr>
+	<tr>
+		<td>Tony</td>
+		<td>Software engineer</td>
+		<td>34</td>
+	</tr>
+</table>
+<button id="even" >Even colour change </button>
+<button id="odd" >Odd style change </button>
+	
+</body>
+</body>
