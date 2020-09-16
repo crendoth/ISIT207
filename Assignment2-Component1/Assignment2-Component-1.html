@@ -12,7 +12,7 @@
         <style type="text/css">
             .animal1 {
                 position: absolute;
-                top: 100px;
+                top: 330px;
                 left: 220px;
                 width: 150px;
                 height: 150px;
@@ -21,7 +21,7 @@
 
             .animal2 {
                 position: absolute;
-                top: 150px;
+                top: 350px;
                 left: 330px;
                 width: 150px;
                 height: 150px;
@@ -30,7 +30,7 @@
 
             .animal3 {
                 position: absolute;
-                top: 200px;
+                top: 400px;
                 left: 440px;
                 width: 150px;
                 height: 150px;
@@ -39,7 +39,7 @@
 
             .animal4 {
                 position: absolute;
-                top: 250px;
+                top: 450px;
                 left: 550px;
                 width: 150px;
                 height: 150px;
@@ -48,7 +48,7 @@
 
             .animal5 {
                 position: absolute;
-                top: 300px;
+                top: 500px;
                 left: 660px;
                 width: 150px;
                 height: 150px;
@@ -67,15 +67,43 @@
             .blue {
                 background-color: blue;
             }
+
+            table, td,th {
+                text-align: center;
+                border: 1px solid black;
             }
+
+            tr:nth-child(even) {
+	            background: red
+            }
+
+
+            tr:nth-child(odd) {
+                font-family: "Lucida Console", Courier, monospace
+                }
+
         </style>
 
     </head>
     <body>
+
         <h1>Assignment 2 - Component 1</h1><br />
-        <h2>Task 1-4</h2>
+
+
+        <h2>Task 1-3: Using Apply, Call, Bind</h2>
+
+    <table style="border: 0px; background: none;">
+
+        <tr><td style="border: 0px; background: white;">This shows the output of 3 * 4 * 2 * 9, where 3 and 4 are numbers in an object and 2 and 9 are numbers in the function</td><td style="border: 0px; background: white;"><button id="submit_nums">Multiply!</button></td></tr>
+        <tr><td style="border: 0px; background: white;" id="call"></td><td style="border: 0px; background: white;">Call</td></tr>
+        <tr><td style="border: 0px; background: white;" id="apply"></td><td style="border: 0px; background: white;">Apply</td></tr>
+        <tr><td style="border: 0px; background: white;" id="bind"></td><td style="border: 0px; background: white;">Bind</td></tr>
+
+    </table>
+    <br>
+        <h2>Task 1-4: Stacking Images</h2>
         <!--   Illustrates dynamic stacking of images -->
-<br>
+        <br /><br />
         <p>
             <img class = "animal1"  id = "animal-image-1"
                  src = "images/animal-image-1.jpg"
@@ -98,33 +126,81 @@
                  alt = "(Picture of an giraffe)"
                  onclick = "toTop('animal-image-5')" />
       </p>
+      <br /><br /><br />
+      <br /><br /><br />
 
-      <h2>Task 1-5</h2>
+      <h2>Task 1-5: Roll the Dice</h2>
       <!--   Dice -->
       <img src="images/1.png" id="dice" style="width:100px"/> <br/> <br/>
       <button type="button" onclick="rollDice();">Roll the dice</button>
+      
+      <br><br><br />
 
+      <h2>Task 1-6: Odd and Even Row Style Manipulation</h2>
+      <br/>
+      <br/>
+      <table style="width:70%">
+          <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Age</th>
+          </tr>
+          <tr>
+              <td>John</td>
+              <td>CEO</td>
+              <td>43</td>
+          </tr>
+          <tr>
+              <td>Mike</td>
+              <td>Assistant</td>
+              <td>32</td>
+          </tr>
+          <tr>
+              <td>Jan</td>
+              <td>Head of Staff</td>
+              <td>59</td>
+          </tr>
+          <tr>
+              <td>Sam</td>
+              <td>Security</td>
+              <td>22</td>
+          </tr>
+          <tr>
+              <td>Maeve</td>
+              <td>Head of Art</td>
+              <td>20</td>
+          </tr>
+          <tr>
+              <td>Adam</td>
+              <td>Software engineer</td>
+              <td>23</td>
+          </tr>
+          <tr>
+              <td>Bobby</td>
+              <td>Janitor</td>
+              <td>66</td>
+          </tr>
+          <tr>
+              <td>Tony</td>
+              <td>Software engineer</td>
+              <td>34</td>
+          </tr>
+      </table>
+      <br>
+      <button id="even" >Even colour change </button>
+      <button id="odd" >Odd style change </button>
+          
 
-    <br><br><br /><br /><br /><br /><br /><br />
-    <h2>Task 1-7</h2>
+    <br><br><br /><br /><br />
+    <h2>Task 1-7:Count Doubles in a String</h2>
     <br />
-    <table>
-    <tr>
-    <td><input type="text" id="count_doubles" /></td><td><button id="count_doubles_click">Count doubles</button></td><td><h3 id="count_doubles_out"></h3></td>
+    <table style="border: 0px; background: white;">
+    <tr >
+    <td style="border: 0px; background: white;"><input type="text" id="count_doubles" /></td><td style="border: 0px; background: white;"><button id="count_doubles_click">Count doubles</button></td><td style="border: 0px; background: white;"><h3 id="count_doubles_out"></h3></td>
     </tr>
     </table>
 
-    <br /><br /><br />
-    <h2>Task 1-3</h2>
-
-    <table>
-
-        <tr><td>This shows the output of 3 * 4 * 2 * 9, where 3 and 4 are numbers in an object and 2 and 9 are numbers in the function</td><td><button id="submit_nums">Multiply!</button></td></tr>
-        <tr><td id="call"></td><td>Call</td></tr>
-        <tr><td id="apply"></td><td>Apply</td></tr>
-        <tr><td id="bind"></td><td>Bind</td></tr>
-
-    </table>
+    
 
 </body>
 </html>

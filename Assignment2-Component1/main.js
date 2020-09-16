@@ -62,24 +62,32 @@ function changeDiceFace(result) {
   }
 
   //Task 1-6: Even and Odd Rows INCOMPLETE
-  var green=false;
-  var blue=false;
-
-  $(function(){
-
-  $("#evenButton").on("click", function(){
-      $("#task2 tr:nth-child(even)").css("background-color","#FF0000");
-      green= !green;
-    });
-$("#oddButton").on("click", function(){
- //   $("#task2 tr:nth-child(odd)").css("color",
-    $("#task2 tr:nth-child(odd)").css("font-size",'20px');
- //   $("#task2 tr:nth-child(odd)").addClass((blue);
-  //  $("#task2 tr:nth-child(odd)").removeClass((blue);
-
-});
-
-  })
+  var evenClicks = 0;
+	var oddClicks = 0;
+	
+	$(document).ready(function(){
+	$("#even").click(function() {
+			if(evenClicks == 0) {
+				$("tr:odd").css("background-color", "green");
+				evenClicks++;
+			} else {
+				$("tr:odd").css("background-color", "red");
+				evenClicks = 0;
+				}
+			});
+	
+	$("#odd").click(function() {
+			if(oddClicks == 0) {
+				$("tr:even").css("font-family", "Times New Roman, Times, serif");
+				oddClicks++;
+			} else {
+				$("tr:even").css("font-family", "Lucida Console, Courier, monospace");
+				oddClicks = 0;
+			}
+			});
+			
+			
+		});
 
 //Task 1-7)
 

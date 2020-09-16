@@ -18,13 +18,13 @@ function slideDown() {
 
 				// slide to down
 				$("#block").animate({
-					top: "200px"
+					top: "500px"
 				}, TimInterval, function() {
 					slideUp();
 				});
 
                 $("#block2").animate({
-					top: "200px"
+					top: "500px"
 				}, TimInterval2, function() {
 					slideUp();
 				});
@@ -35,11 +35,11 @@ function slideUp() {
 				slideDir = "u";
 
 				// slide to up
-				$("#block").animate({top: "15px"}, TimInterval, function() {
+				$("#block").animate({top: "100px"}, TimInterval, function() {
 					slideDown();
 				});
                 // slide to up
-				$("#block2").animate({top: "15px"}, TimInterval2, function() {
+				$("#block2").animate({top: "100px"}, TimInterval2, function() {
 					slideDown();
 				});
 			}
@@ -65,6 +65,7 @@ $(document).ready(function() {
 		</script>
 	</head>
 	<body>
+		<h1>Task 1-9: Box Animation</h1>
 		<button id="start">start</button>
 		<button id="stop">stop</button> <br/>
         <img id="block" style="background:teal;height:100px;width:100px;position:absolute;"/>
