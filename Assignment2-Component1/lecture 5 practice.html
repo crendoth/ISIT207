@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p.intro").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2 class="intro">This is a heading</h2>
+
+<p class="intro">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("tr:even").css("background-color", "yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>Welcome to My Web Page</h1>
+
+<table border="1">
+  <tr>
+    <th>Company</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+</table>
+
+
+
+<h2>Link Titles</h2>
+<p>The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.</p>
+<a href="https://youtube.com/" title="Visit Youtube Website">Visit Youtube Home Page</a>
+
+<br/><br/><br/><br/>
+
+<!-- On Click Color Change-->
+
+  <style>
+  div {
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bolder;
+    width: 300px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+
+
+ 
+<script>
+$( document.body ).click(function() {
+  $( "div" ).each(function( i ) {
+    if ( this.style.color !== "blue" ) {
+      this.style.color = "blue";
+    } else {
+      this.style.color = "";
+    }
+  });
+});
+</script>
+
+<br/><br/><br/>
+<!--Change Font Style example-->
+  <style>
+  ul {
+    font-size: 18px;
+    margin: 0;
+  }
+  span {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .example {
+    font-style: italic;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+To do list: <span>(click here to change)</span>
+<ul>
+  <li>Eat</li>
+  <li>Sleep</li>
+  <li>Be merry</li>
+</ul>
+ 
+<script>
+$( "span" ).click(function() {
+  $( "li" ).each(function() {
+    $( this ).toggleClass( "example" );
+  });
+});
+</script>
+<br/><br/><br/>
+
+
+<style>
+    div {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      float: left;
+      border: 2px blue solid;
+      text-align: center;
+    }
+    span2 {
+      color: red;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+    
+   
+  <button>Change colors</button>
+  <span></span>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div id="stop">Stop here</div>
+  <div></div>
+  <div></div>
+  <div></div>
+   
+  <script>
+  $( "button" ).click(function() {
+    $( "div" ).each(function( index, element ) {
+      // element == this
+      $( element ).css( "backgroundColor", "yellow" );
+      if ( $( this ).is( "#stop" ) ) {
+        $( "span2" ).text( "Stopped at div index #" + index );
+        return false;
+      }
+    });
+  });
+</script>
+
+<br/><br/><br/>
+<br/><br/><br/>
+
+
+<!-- Backgrounf color -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").filter(".intro").css("background-color", "yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p>My name is Shahroz.</p>
+<p class="intro">I live in Sydney.</p>
+<p class="intro">I love Australia.</p>
+<p>My Lecturer is Reza.</p>
+
+<br/><br/><br/>
+<br/><br/><br/>
+
+<style>
+    div2 {
+      width: 60px;
+      height: 60px;
+      margin: 5px;
+      float: left;
+      border: 3px white solid;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+   
+  <div2 id="first"></div2>
+  <div2 id="second"></div2>
+  <div2 id="third"></div2>
+  <div2 id="fourth"></div2>
+  <div2 id="fifth"></div2>
+  <div2 id="sixth"></div2>
+   
+  <script>
+  $( "div2" )
+    .css( "background", "#b4b0da" )
+    .filter(function( index ) {
+      return index === 1 || $( this ).attr( "id" ) === "fourth";
+    })
+      .css( "border", "3px double red" );
+  </script>
+
+<br/><br/><br/>
+<br/><br/><br/>
+
+<!--Table Search-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</head>
+<body>
+
+<h2>Filterable Table</h2>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>  
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>john@example.com</td>
+  </tr>
+  <tr>
+    <td>Mary</td>
+    <td>Moe</td>
+    <td>mary@mail.com</td>
+  </tr>
+  <tr>
+    <td>July</td>
+    <td>Dooley</td>
+    <td>july@greatstuff.com</td>
+  </tr>
+  <tr>
+    <td>Anja</td>
+    <td>Ravendale</td>
+    <td>a_r@test.com</td>
+  </tr>
+  </tbody>
+</table>
+  
+
+<br/><br/><br/>
+<br/><br/><br/>
+
+<!-- Fade IN -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button>Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+<br/><br/><br/>
+<br/><br/><br/>
+
+<!-- Fade OUT -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeOut();
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(3000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeOut() with different parameters.</p>
+
+<button>Click to fade out boxes</button><br><br>
+
+<br/><br/><br/>
+<br/><br/><br/>
+
+<!-- Fade Toggle -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button1").click(function(){
+    $("#div10").fadeToggle();
+    $("#div20").fadeToggle("slow");
+    $("#div30").fadeToggle(3000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+<button1>Click to fade in/out boxes</button1><br><br>
+
+<div id="div10" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div id="div20" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+<div id="div30" style="width:80px;height:80px;background-color:blue;"></div>
+
+
+<br/><br/><br/>
+<br/><br/><br/>
+
+<!-- Fade To -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button11").click(function(){
+    $("#div11").fadeTo("slow", 0.15);
+    $("#div21").fadeTo("slow", 0.4);
+    $("#div31").fadeTo("slow", 0.7);
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeTo() with different parameters.</p>
+
+<button11>Click to fade boxes</button11><br><br>
+
+<div id="div11" style="width:80px;height:80px;background-color:red;"></div><br>
+<div id="div21" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div31" style="width:80px;height:80px;background-color:blue;"></div>
+
+<br/><br/><br/>
+<br/><br/><br/>
+
+<!-- Hide Function -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+</html>
+
