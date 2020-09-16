@@ -1,37 +1,78 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
     <meta charset = "utf-8" />
- <head>
-    <script type = "text/javascript"  src = "main.js" >
-    </script>
-    
-    <style type = "text/css">
-        .animal1 {position: absolute; top: 100px; left: 220px; width: 150px; height:150px;
-                 z-index: 0;}
-        .animal2 {position: absolute; top: 150px; left: 330px; width: 150px; height:150px;
-                 z-index: 0;}
-        .animal3 {position: absolute; top: 200px; left: 440px; width: 150px; height:150px;
-                 z-index: 0;}
-        .animal4 {position: absolute; top: 250px; left: 550px; width: 150px; height:150px;
-                 z-index: 0;}
-        .animal5 {position: absolute; top: 300px; left: 660px; width: 150px; height:150px;
-                 z-index: 0;}
-        .dice { 
-            width:50px;
-            height:50px;
-        }
-        .red { background-color: red;
-        }
-        .blue { background-color: blue;
-        }
-}
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-    </style>
-  
-</head>
+        <script type="text/javascript" src="main.js">
+
+        </script>
+
+        <style type="text/css">
+            .animal1 {
+                position: absolute;
+                top: 100px;
+                left: 220px;
+                width: 150px;
+                height: 150px;
+                z-index: 0;
+            }
+
+            .animal2 {
+                position: absolute;
+                top: 150px;
+                left: 330px;
+                width: 150px;
+                height: 150px;
+                z-index: 0;
+            }
+
+            .animal3 {
+                position: absolute;
+                top: 200px;
+                left: 440px;
+                width: 150px;
+                height: 150px;
+                z-index: 0;
+            }
+
+            .animal4 {
+                position: absolute;
+                top: 250px;
+                left: 550px;
+                width: 150px;
+                height: 150px;
+                z-index: 0;
+            }
+
+            .animal5 {
+                position: absolute;
+                top: 300px;
+                left: 660px;
+                width: 150px;
+                height: 150px;
+                z-index: 0;
+            }
+
+            .dice {
+                width: 50px;
+                height: 50px;
+            }
+
+            .red {
+                background-color: red;
+            }
+
+            .blue {
+                background-color: blue;
+            }
+            }
+        </style>
+
+    </head>
     <body>
-        <h1>Assignment 2 - Component 1</h1>
+        <h1>Assignment 2 - Component 1</h1><br />
         <h2>Task 1-4</h2>
         <!--   Illustrates dynamic stacking of images -->
 <br>
@@ -61,10 +102,29 @@
       <h2>Task 1-5</h2>
       <!--   Dice -->
       <img src="images/1.png" id="dice" style="width:100px"/> <br/> <br/>
-      <button type="button" onclick="rollDice();">Roll the dice</button> 
+      <button type="button" onclick="rollDice();">Roll the dice</button>
 
 
-    <br><br>
+    <br><br><br /><br /><br /><br /><br /><br />
+    <h2>Task 1-7</h2>
+    <br />
+    <table>
+    <tr>
+    <td><input type="text" id="count_doubles" /></td><td><button id="count_doubles_click">Count doubles</button></td><td><h3 id="count_doubles_out"></h3></td>
+    </tr>
+    </table>
+
+    <br /><br /><br />
+    <h2>Task 1-3</h2>
+
+    <table>
+
+        <tr><td>This shows the output of 3 * 4 * 2 * 9, where 3 and 4 are numbers in an object and 2 and 9 are numbers in the function</td><td><button id="submit_nums">Multiply!</button></td></tr>
+        <tr><td id="call"></td><td>Call</td></tr>
+        <tr><td id="apply"></td><td>Apply</td></tr>
+        <tr><td id="bind"></td><td>Bind</td></tr>
+
+    </table>
 
 </body>
 </html>
