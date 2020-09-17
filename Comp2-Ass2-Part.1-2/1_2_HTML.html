@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#heading
+        {
+    	    text-align: center;
+        }
+
+        #table
+        {
+            width: 40%;
+			margin-left:auto; 
+			margin-right:auto;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		tr:nth-child(even){background-color: #f2f2f2;}
+
+		tr:hover {background-color: #ddd;}
+			
+		.inputs {text-align: center;}
+	</style>
+</head>
+<body>
+
+	<h2 id = "heading">Toys Filter Table</h2>
+
+        <br/>
+        <br/>
+
+        <!-- price input to filter table -->
+		<div class="inputs">
+			<button onclick = "resetButton()">Reset</button>
+
+        	<input type = "text" id = "myInput" onkeyup = "priceSearch()" placeholder = "Search for prices..">
+
+        	<!-- Implements all other array methods (push, unshift, splice, map, forEach and sort) -->
+        	<button onclick = "arrayMethodsButton()">Implement Array Methods to Console</button>
+
+        	<br/>
+
+        	<!-- finds first toy of colour entered -->
+        	<input type = "text" id = "find" placeholder = "See first toy of colour...">
+
+        	<button onclick = "findButton()">Find</button>
+
+        	<span id="found"></span>
+		</div>
+
+        <br/>
+        <br/>
+
+        <!-- toys table to be filtered -->
+        <table id = "table" style = "border: 1px solid grey"></table>
+</body>
+
+	<script type = "text/javascript" src = "1_2_JAVASCRIPT.js" defer></script>
+
+</html>
