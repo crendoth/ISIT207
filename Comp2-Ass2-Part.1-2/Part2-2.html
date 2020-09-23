@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script  type = "text/javascript" src="main.js"></script>
+
+    <style>
+      h1.callback{
+          display:none;
+          background:red;
+          padding:20px;
+      }
+      p.callback{
+          background:yellow;
+          font-size: 24px;
+          padding:20px;
+      }
+  </style>
+</head>
+<body>
+  <h1>Assignment 2 - Component 2</h1>
+        <h2>Task 1: jQuery Effects </h2>
+
+        <!--   animate start -->
+        <h3>1. Animate()</h3>
+        <div>
+        <button id="anim1">Animate height</button>
+        <button id="anim2">Reset height</button>
+        <br><br>
+         <img src="mario.png" id="mario" style="position:relative; height: 250px;"/>
+        </div>
+        <!--   animate end -->
+        <!--   toggle start -->
+        <div>
+         <h3>2. Toggle()</h3>
+         <button type="button" class="toggle-btn">Toggle Paragraph</button> 
+         <p class="toggle">The above button uses show and hide effects along with the toggle function. The jQuery toggle() method shows or hides the elements in such a way that if the element is initially displayed, it will be hidden; if hidden, it will be displayed (i.e. toggles the visibility).</p>
+    
+         <!--   toggle end -->
+         </div>
+          <!--   show/hide start -->
+        <div>
+        <h3>3. Show() and 4. Hide()</h3>
+        
+        
+         <button type="button" class="hide-btn">Hide Numbers</button> 
+         <button type="button" class="show-btn">Show Numbers</button>
+         <br><br></br>
+         <img class="slow" src="number-1.png" style="position:relative"/>
+         <img class="normal" src="number-2.png"  style="position:relative"/>
+         <img class="fast" src="numbre-3.png" style="position:relative" />
+             <!--  show/hide end -->
+         </div>
+    <!--  Slide up() and Slide down () start -->
+    <div>
+    <h3>5. Slideup() and 6.Slidedown() </h3>
+
+         <button type="button" class="up-btn">Slide Up Image</button> 
+         <button type="button" class="down-btn">Slide Down Image</button>
+        
+         <br><br>
+         <img class="slide" src="https://media.tenor.com/images/a90f29b571d06e615b7afa287733f2b8/tenor.gif" >
+
+    <!--  Slide up() and Slide down ()end -->
+  </div>
+  
+
+  <div>
+
+    <!--  Fade In() and  Fade out() start -->
+    <h3>7. Fadein() and 8. Fadein() </h3>
+        <button id="fadetoggle">Click to fade in/out circles</button><br><br>
+        <button id="fadeout">Click to fade out circles</button>
+        <button id="fadein">Click to fade in circles</button>
+        <br><br>
+
+        <div id="div1" style="width: 40px; height: 40px; background-color: orangered; border-radius: 100px;"></div>
+        <br>
+        <div id="div2" style="width: 40px; height: 40px; background-color: orange; border-radius: 100px;"></div>
+        <br>
+        <div id="div3" style="width: 40px; height: 40px; background-color: yellow; border-radius: 100px;"></div>
+
+<!--  Fade In() and  Fade out() end -->
+</div>
+
+<div>
+<!--  Stop() Effect start-->
+<h3>9. Stop() Effect </h3>
+
+    <button type="button" class="start-btn">Start</button>
+    <button type="button" class="stop-btn">Stop</button>
+    <button type="button" class="back-btn">Back</button>
+    <button type="button" class="reset-btn">Reset</button>
+    <div>
+    	<img class="stop" src="mariorun.png" alt="Mario" style="position:relative; height: 150px;">
+    </div>
+
+  </div>
+<!--  Stop() Effect start-->
+
+<!--  callback() start-->
+ <div>
+  <h3>10. Callback </h3>
+    <h1 class="callback">Hello!</h1>
+    <p class="callback">Click to reveal secret code</p>
+    <button type="button" class="call_back">Click me</button>
+  </div>
+
+
+<!--  callback() end-->
+
+
+
+
+
+        <h2>jQuery Effects  </h2>
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ul>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    
+    <ol>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ol>
+    
+    <button id="btn1">Prepend text</button>
+    <button id="btn2">Prepend list item</button>
+
+
+    
+</body>
+</html>
