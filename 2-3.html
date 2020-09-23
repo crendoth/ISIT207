@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
+</head>
+<body>
+    <h1>You can select the text below and drag it around the page</h1>
+<div id="draggable" class="ui-widget-content">
+    </br></br>
+  <p>Click and Hold. Drag me around</p>
+</div>
+
+
+<br/><br/><br/><br/>
+<!--This Item is Erasable-->
+
+<script>
+$(document).ready(function(){
+  $("p1").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+
+
+<h1>Click on the following text to make it dissapear</h1></br></br>
+<p1>If you click on me, I will disappear.</p1>
+<p1>Click me away!</p1>
+<p1>Click me too!</p1>
+
+
+
+<!--These items are selectable-->
+<br/><br/><br/><br/>
+
+<style>
+    #feedback { font-size: 1.4em; }
+    #selectable .ui-selecting { background: #FECA40; }
+    #selectable .ui-selected { background: #F39814; color: white; }
+    #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+    </style>
+
+    <script>
+    $( function() {
+      $( "#selectable" ).selectable();
+    } );
+    </script>
+  </head>
+  <body>
+
+   <h1>Select Items for multiple selection</h1>
+  <ol id="selectable">
+    <li class="ui-widget-content">Item 1</li>
+    <li class="ui-widget-content">Item 2</li>
+    <li class="ui-widget-content">Item 3</li>
+    <li class="ui-widget-content">Item 4</li>
+    <li class="ui-widget-content">Item 5</li>
+    <li class="ui-widget-content">Item 6</li>
+    <li class="ui-widget-content">Item 7</li>
+  </ol>
+
+  <br/><br/><br/><br/>
+
+  <!--These items are sortable -->
+
+  <style>
+    #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+    #sortable li span { position: absolute; margin-left: -1.3em; }
+    </style>
+
+    <script>
+    $( function() {
+      $( "#sortable" ).sortable();
+      $( "#sortable" ).disableSelection();
+    } );
+    </script>
+  </head>
+  <body>
+    <h1>Select Items and drag to sort</h1>
+
+  <ul id="sortable">
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+  </ul>
+
+
+
+  <br/><br/><br/><br/>
+  <!--These items are slideable downwards-->
+
+  
+  <script> 
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+      });
+    });
+    </script>
+    <style> 
+    #panel, #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #e5eecc;
+      border: solid 1px #c3c3c3;
+    }
+    
+    #panel {
+      padding: 50px;
+      display: none;
+    }
+    </style>
+    </head>
+    <body>
+     <h1>Click on the text to slide it downwards</h1>
+    <div id="flip">Click here to slide down panel</div>
+    <div id="panel">Welcome To ISIT207</div>
+
+
+    <br/><br/><br/><br/>
+  <!--This item will show the tool tip-->
+  <script>
+    $( function() {
+      $( document ).tooltip();
+    } );
+    </script>
+    <style>
+    label {
+      display: inline-block;
+      width: 5em;
+    }
+    </style>
+  </head>
+  <body>
+   
+ <h1>Drag the pointer on the text-field to see the tooltip</h1>
+  <p><label for="student">Student ID:</label><input id="student" title="We ask for your student number only to recognise your personality."></p></br><br/><br/>
+  <br/><br/><br/><br/>
+
+</body>
+
+</html>
