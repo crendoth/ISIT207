@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>Component 2-5</title>
+  	<style>
+  		img{
+    		height: 200px;
+  		}
+  		.myDiv{
+  			text-align: center;
+  		}
+  	</style>
+  	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<div class="myDiv">
+
+		<h2 />Assignment 2, Component 2-5
+		<br>
+		<input type="textbox" id="content" placeholder="Search for an Image">
+		<button onclick="searchButton()">Search</button>
+		<div id="images"></div>
+
+	</div>
+ 
+<script>
+	function searchButton(){
+		var content = document.getElementById("content").value;
+
+		(function() {
+			var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+		  	$.getJSON( flickerAPI, {
+		    	tags: content,
+		    	tagmode: "any",
+		    	format: "json"
+		  	})
+		    .done(function( data ){
+		     	$.each( data.items, function( i, item ){
+		        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+		        	if ( i === 0 ){
+		        		return false;
+		        	}
+		      	});
+		    });
+		})();
+	}
+</script>
+
+</body>
+</html>
