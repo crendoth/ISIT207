@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Earth Script</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+		<style>
+			#sun {
+				position: absolute;
+				top: 23%;
+				left: 41%;
+				width: 20px;
+				height: 25px;
+				border-radius: 50%;
+ 
+			}
+			
+			#earthWrapper {
+				width: 400px;
+				height: 400px;
+				position: absolute;
+				z-index: -1;
+				top: 10%;
+				left: 35%;
+				border: 1px solid #000;
+				border-radius: 50%;
+			}
+			#earth {
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				border-radius: 50%;
+				top: 10;
+				left: 10;
+				
+			}
+		</style>
+	</head>
+	<body>
+	
+			<img id="sun" src="http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2000/11/soho_image_of_the_sun/9227898-5-eng-GB/SOHO_image_of_the_Sun.gif" style="width: 200px; height: 200px"/>
+
+		
+		<div id="earthWrapper">
+			<img id="earth" src="https://www.nasa.gov/sites/default/files/1-bluemarble_west.jpg" style="width: 100px; height:100px;"/>
+		</div>
+		
+		
+		<script>
+			var sunRotate = 0;
+			var earthRotate = 0;
+			var earthSpeed = 10;
+			
+			function rotateSun() {
+				$("#sun").css({'transform': 'rotate(' + sunRotate + 'deg)'});
+				sunRotate++;
+				setTimeout(rotateSun, 10);
+			}
+			
+			function rotateEarth() {
+				$("#earthWrapper").css({'transform': 'rotate(' + earthRotate + 'deg)'});
+				earthRotate++;
+				setTimeout(rotateEarth, earthSpeed);
+			}
+			
+			rotateSun();
+			rotateEarth();
+			
+			$("#sun").click(function() {
+				earthSpeed = earthSpeed * 0.9;
+				earthRotate = earthRotate * 0.9;
+			});
+		</script>
+		 
+    </body>
+</html>
