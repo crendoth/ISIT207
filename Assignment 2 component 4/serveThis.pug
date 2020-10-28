@@ -1,0 +1,12 @@
+doctype html
+html
+	head
+		script.
+			function hi(){
+
+				alert("Hi " + document.getElementById("myName").value);
+
+			}
+	body
+		input(type="text" placeholder="What's your name?" id="myName")
+		button(onclick='hi()') Say hello!

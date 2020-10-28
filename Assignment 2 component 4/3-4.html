@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Component 3-4: Flickr API</title>
+</head>
+<body>
+    <br>
+            Enter a topic(s) you want to search separated by comma
+			<input id="topic" type="text"/>
+            <button id="search">Search </button>
+    
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            
+            <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#search").click(function (e) {
+                $("#DivFlick").html("");
+                flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?tagmode=all&format=json&tags=" + $("#topic").val();
+
+                //tagmode (Optional)control whether items must have ALL the tags (tagmode=all), or ANY (tagmode=any) of the tags. Default is ALL.
+				
+                $.ajax({
+                    url: flickerAPI,
+                    dataType: "jsonp",
+                    jsonpCallback: 'jsonFlickrFeed',
+                    
+					//JSONP of flicker has a wrapper function called jsonFlickrFeed.
+					success: function (result, status, xhr) {
+						$.each(result.items, function (k, item) {
+                            $("<img>").attr("src", item.media.m).appendTo("#DivFlick");
+                            if (k === 10) {
+                                return false;
+                            }
+                        });
+						$("#Output").html(JSON.stringify(result));
+                    },
+                    error: function (xhr, status, error) {
+                        alert(xhr)
+                        $("#DivFlick").html( error + xhr.statusText)
+                    }
+                });
+            });
+        });
+    </script>
+
+	<div id="DivFlick"></div>
+    <div id="Output"></div>
+</body>
+</html>
+
